@@ -7,33 +7,34 @@
 // BODY ELEMENT
 .page-body {
     font-family: 'Jura', serif;
-    background-color: #ffffff;
+    color: #ffffff;
+    // text-transform: uppercase;
     text-align: center;
     min-height: 100%;
+    background-color: #000000;
+    // background-image: url("/images/field1.jpg");
 }
 
-// MAIN DIV IN BODY
-.body-container {
-    padding-top: 15%;
+.container {
+    padding-top: 14%;
 
-    h1 {
-        font-size: 36px;
-        font-weight: bold;
+    #homepage-image {
+        text-align: center;
     }
-}
+}   
 
 #custom-button {
-    color: #000000;
-    border-color: #000000;
-    background-color: #ffffff;
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: transparent;
     border-radius: 0px;
     width: 12em;
-    margin-top: 20px;
+    margin: auto;
 
     &:hover {
         color: #89FF00;
-        border-color: #ffffff;
-        background-color: #000000;
+        border-color: #89FF00;
+        background-color: transparent;
     }
 }
 
@@ -44,7 +45,9 @@
 .navbar {
     border-radius: 0px;
     font-family: 'Abel', serif;
-    background-color: #000000;
+    //background-color: #000000;
+    //background-image: url("/images/congruent_outline.png");
+    background-repeat: repeat;
 }
 
 // LAST ITEM IN LIST
@@ -63,6 +66,7 @@
 
     .icon-bar {
         width: 22px;
+        background-color: #9d9d9d !important;
         -webkit-transition: all 0.2s;
         transition: all 0.2s; 
     }

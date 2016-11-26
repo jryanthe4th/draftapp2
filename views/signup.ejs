@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>DynastyDraftBoard</title>
-        <!-- Viewport mobile tag for sensible mobile support -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body class="page-body" ng-app="SignupModule" ng-controller="SignupCtrl" ng-cloak>
         <div class="container">
-            sign up bitches!
+
+
+            <form ng-submit="submitCreateLeagueForm()" id="createLeague-form" name="createLeague">
+                <div class="form-group" id="input-container">
+
+                    <!-- LEAGUE NAME INPUT -->
+                    <!-- checking whether the form "signup" with the "firstName" property is both $invalid AND $dirty.  If it is
+                    insert the "has-error" class on the input field (i.e. insert a red border around the input field)-->
+                    <div class="row">
+                        <div class="col" ng-class="{'has-error':createLeague.leagueName.$invalid && createLeague.leagueName.$dirty}">
+                            <label for="leagueName" class="input-label">League Name</label>
+                            <input type="text" name="leagueName" id="leagueName" class="form-control" ng-model="createLeagueForm.leagueName" ng-maxlength="50" required>
+                            <span class="help-block has-error" ng-if="createLeague.leagueName.$dirty">
+                                <span ng-show="createLeague.leagueName.$error.required">League Name is Required</span>
+                                <span ng-show="createLeague.leagueName.$error.maxlength">League Name Cannot be More Than 50 Characters</span>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="btn btn-lg btn-primary" id="custom-button2" type="submit" ng-disabled="createLeague.$invalid">
+                        <span ng-show="!createLeagueForm.loading">Create League</span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </form>
+
+
         </div>
-        <footer class="footer"><h5>built by fantasy players for fantasy players</h5></footer>
+        <!-- <footer class="footer"><h5>built by fantasy players for fantasy players</h5></footer> -->
     </body>
 </html>
+
+
+
+
+
+<!--             <form ng-submit="submitCreateLeagueForm()" id="createLeague-form" name="createLeague">
+                <div id="input-container">
+                    <div class="row">
+                        <div class="control-group form-group col-md-6" ng-class="{'has-error':createLeague.leagueName.$invalid && createLeague.leagueName.$dirty"></div>
+                            <label for="leagueName" class="input-label">League Name</label>
+                            <input type="text" name="leagueName" id="leagueName" class="form-control" ng-model="createLeagueForm.leagueName" ng-maxlength="100" required>
+                            <span class="help-block has-error" ng-if="createLeague.leagueName.$dirty">
+                                <span ng-show="createLeague.leagueName.$error.required">League Name is Required</span>
+                                <span ng-show="createLeague.leagueName.$error.maxlength">League Name Cannot be More Than 100 Characters</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form> -->

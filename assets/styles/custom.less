@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Jura);
+@import url(https://fonts.googleapis.com/css?family=Abel);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+/////////////// - BODY & SITE WIDE STANDARDS - ///////////////
+
+// BODY ELEMENT
+.page-body {
+    font-family: 'Jura', serif;
+    background-color: #ffffff;
+    text-align: center;
+    min-height: 100%;
+}
+
+// MAIN DIV IN BODY
+.body-container {
+    padding-top: 15%;
+
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+    }
+}
+
+#custom-button {
+    color: #000000;
+    border-color: #000000;
+    background-color: #ffffff;
+    border-radius: 0px;
+    width: 12em;
+    margin-top: 20px;
+
+    &:hover {
+        color: #89FF00;
+        border-color: #ffffff;
+        background-color: #000000;
+    }
+}
+
+/////////////// - NAVBAR - ///////////////
+.container-fluid {
+    padding-left:  0px;
+    padding-right: 0px;
+}
+
+// BOOTSTRAP CONTAINER
+.navbar {
+    border-radius: 0px;
+}
+
+.nav-container {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#navbar-title {
+    font-family: 'Abel', serif;
+}
+
+#navbar-ul {
+    font-family: 'Abel', serif;
+}
+
+// MOVES NAVBAR OVER
+.navbar-nav.navbar-right:last-child {
+    margin-right: 2px;
+}
+
+// NAVBAR BUTTON - THREE BARS TO X ANIMATION
+.navbar-toggle {
+    border: none;
+    background: transparent !important;
+
+    &:hover {
+        background: transparent !important;
+    }
+
+    .icon-bar {
+        width: 22px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s; 
+    }
+
+    .top-bar {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-transform-origin: 10% 10%;
+                transform-origin: 10% 10%;
+    }
+
+    .middle-bar {
+        opacity: 0;
+    }
+
+    .bottom-bar {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 10% 90%;
+                transform-origin: 10% 90%;
+    }
+
+    &.collapsed {
+        .top-bar {
+            -webkit-transform: rotate(0);
+                    transform: rotate(0);
+        }
+
+        .middle-bar {
+            opacity: 1;
+        }
+
+        .bottom-bar {
+            -webkit-transform: rotate(0);
+                    transform: rotate(0);
+        }
+    }
+}
+
+// NAVBAR UL
+#navbar-ul {
+    text-align: right;
+}
+
+/////////////// - HOMEPAGE - ///////////////
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+

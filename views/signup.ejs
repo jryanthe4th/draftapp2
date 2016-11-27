@@ -12,7 +12,7 @@
     <body class="page-body" ng-app="SignupModule" ng-controller="SignupCtrl" ng-cloak>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3 col-md-offset-4" id="form-container">
+                <div class="col-md-4 col-md-offset-4" id="form-container">
 
 
                     <!-- FORM -->
@@ -22,7 +22,7 @@
                         <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && userForm.email.$dirty }">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" name="email" id="email" ng-model="user.email" ng-maxlength="50" required>
-                            <span class="help-block has-error" ng-if="userForm.email.$dirty">
+                            <span class="help-block has-error" ng-if="userForm.email.$dirty" ng-cloak>
                                 <span ng-show="userForm.email.$error.required">Email is Required</span>
                                 <span ng-show="userForm.email.$error.maxlength">Email Cannot be More Than 50 Characters</span>
                             </span>
@@ -73,9 +73,10 @@
                         <button class="btn btn-lg btn-primary" id="" type="submit" ng-disabled="userForm.$invalid">
                             <span ng-show="!userForm.loading">Create Account</span>
                             <span class="draftapp-loading-spinner fa fa-spinner" ng-show="signupForm.loading" ></span>
+                            <br>
                             <span ng-show="userForm.loading">Creating account...</span>
                         </button>
-
+                        <input type="hidden" name="_csrf" value="<%= _csrf %>" />
                     </form>
 
 

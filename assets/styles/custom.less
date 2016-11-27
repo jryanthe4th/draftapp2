@@ -2,9 +2,10 @@
 @import url(https://fonts.googleapis.com/css?family=Abel);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
-/////////////// BODY & SITE WIDE STANDARDS ///////////////
+////////////////////////////////////////
+///     SITE WIDE STYLES
+////////////////////////////////////////
 
-// BODY ELEMENT
 .page-body {
     font-family: 'Jura', serif;
     color: #ffffff;
@@ -15,7 +16,7 @@
     // background-image: url("/images/field1.jpg");
 }
 
-.container {
+.container-fluid {
     padding-top: 14%;
 
     #homepage-image {
@@ -23,13 +24,13 @@
     }
 }   
 
-#custom-button1 {
+.btn-primary {
     color: #ffffff;
     border-color: #22A7F0;
     background-color: transparent;
     border-radius: 0px;
     width: 12em;
-    margin-top: 50px;
+    margin: 20px;
 
     &:hover {
         color: #fff;
@@ -38,9 +39,24 @@
         box-shadow: 0 0 15px 2px #2175c0,#2175c0 0 0 11px 3px inset;
         text-shadow: 0 0 5px #2175c0,0 0 10px #2175c0,0 0 20px #2175c0,0 0 30px #2175c0,0 0 40px #22A7F0,0 0 55px #22A7F0;
     }
+
+    &:focus {
+        color: #fff;
+        border-color: #ce08d7;
+        background-color: transparent;
+        box-shadow: 0 0 15px 2px #ce08d7,#ce08d7 0 0 11px 3px inset;
+        text-shadow: 0 0 5px #ce08d7,0 0 10px #ce08d7,0 0 20px #ce08d7,0 0 30px #ce08d7,0 0 40px #700475,0 0 55px #700475;
+    }
+
+    &:disabled {
+        border-color: #22A7F0;
+        background-color: transparent;
+    }
 }
 
-/////////////// NAVBAR ///////////////
+////////////////////////////////////////
+///     NAVBAR
+////////////////////////////////////////
 
 
 // BOOTSTRAP CONTAINER
@@ -114,7 +130,9 @@
     font-size: 1.2em;
 }
 
-/////////////// HOMEPAGE ///////////////
+////////////////////////////////////////
+///     HOMEPAGE
+////////////////////////////////////////
 
 .footer {
     position: absolute;
@@ -130,27 +148,21 @@
 }
 
 
-/////////////// SIGNUP PAGE ///////////////
-#input-container {
-    padding-top: 10%;
-    padding-left: 20%;
-    padding-right: 20%;
+////////////////////////////////////////
+///     SIGNUP PAGE
+////////////////////////////////////////
+#form-container {
+    // padding-left: 10%;
+    // padding-right: 10%;
 }
 
 label {
     color: #fff !important;
     float: left !important;
+    padding-top: 10px;
     //text-shadow: 0 0 5px #1fc139,0 0 10px #1fc139,0 0 20px #1fc139,0 0 30px #1fc139,0 0 40px #11691f,0 0 55px #11691f;
     //text-shadow: 0 0 5px #ce08d7,0 0 10px #ce08d7,0 0 20px #ce08d7,0 0 30px #ce08d7,0 0 40px #700475,0 0 55px #700475;
     text-shadow: 0 0 5px #2175c0,0 0 10px #2175c0,0 0 20px #2175c0,0 0 30px #2175c0,0 0 40px #22A7F0,0 0 55px #22A7F0;
-}
-
-.input-label {
-    text-align: left !important;
-}
-
-.form-group {
-    //box-shadow: 0 0 15px 2px #2175c0,#2175c0 0 0 11px 3px inset;
 }
 
 .form-control {
@@ -175,13 +187,16 @@ label {
 
 .has-error {
     .form-control {
-        border-color: #ce08d7;
+            color: #fff;
+            border-color: #ce08d7;
+            background-color: transparent;
+            box-shadow: 0 0 1px 2px #ce08d7,#ce08d7 0 0 1px 0px inset;
 
         &:focus {
             color: #fff;
             border-color: #ce08d7;
             background-color: transparent;
-            box-shadow: 0 0 15px 2px #ce08d7,#ce08d7 0 0 11px 3px inset;
+            box-shadow: 0 0 1px 2px #ce08d7,#ce08d7 0 0 1px 0px inset;
         }
     }
 }
@@ -190,32 +205,13 @@ span.help-block.has-error.ng-scope{
         color: #fff;
         background-color: transparent;
         text-shadow: 0 0 5px #ce08d7,0 0 10px #ce08d7,0 0 20px #ce08d7,0 0 30px #ce08d7,0 0 40px #700475,0 0 55px #700475;
-    
 }
 
-#custom-button2 {
-    color: #ffffff;
-    border-color: #ffffff;
-    background-color: transparent;
-    border-radius: 0px;
-    width: 12em;
-    margin-top: 50px;
-
-    &:hover {
-        color: #fff;
-        border-color: #22A7F0;
-        background-color: transparent;
-        box-shadow: 0 0 15px 2px #2175c0,#2175c0 0 0 11px 3px inset;
-        text-shadow: 0 0 5px #2175c0,0 0 10px #2175c0,0 0 20px #2175c0,0 0 30px #2175c0,0 0 40px #22A7F0,0 0 55px #22A7F0;
-    }
-
-    &:focus {
-        color: #fff;
-        border-color: #ce08d7;
-        background-color: transparent;
-        box-shadow: 0 0 15px 2px #ce08d7,#ce08d7 0 0 11px 3px inset;
-        text-shadow: 0 0 5px #ce08d7,0 0 10px #ce08d7,0 0 20px #ce08d7,0 0 30px #ce08d7,0 0 40px #700475,0 0 55px #700475;
-    }
+select {
+    color: #22A7F0 !important;
+    text-align: center !important;
+    // width: 20% !important;
 }
+
 
 

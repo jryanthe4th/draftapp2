@@ -1,56 +1,86 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Sign Up - DynastyDraftBoard</title>
+        <!--STYLES-->
+        <link rel="stylesheet" href="/styles/angular-toastr.css">
+        <link rel="stylesheet" href="/styles/bootstrap.3.1.1.css">
+        <link rel="stylesheet" href="/styles/custom.css">
+        <link rel="stylesheet" href="/styles/scrolling-nav.css">
+        <!--STYLES END-->
     </head>
     <body class="page-body" ng-app="SignupModule" ng-controller="SignupCtrl" ng-cloak>
-        <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-4" id="form-container">
 
 
-            <form ng-submit="submitCreateLeagueForm()" id="createLeague-form" name="createLeague">
-                <div class="form-group" id="input-container">
+                    <!-- FORM -->
+                    <form name="userForm" id="userForm" ng-submit="submitUserForm()" novalidate>
 
-                    <!-- LEAGUE NAME INPUT -->
-                    <!-- checking whether the form "signup" with the "firstName" property is both $invalid AND $dirty.  If it is
-                    insert the "has-error" class on the input field (i.e. insert a red border around the input field)-->
-                    <div class="row">
-                        <div class="col" ng-class="{'has-error':createLeague.leagueName.$invalid && createLeague.leagueName.$dirty}">
-                            <label for="leagueName" class="input-label">League Name</label>
-                            <input type="text" name="leagueName" id="leagueName" class="form-control" ng-model="createLeagueForm.leagueName" ng-maxlength="50" required>
-                            <span class="help-block has-error" ng-if="createLeague.leagueName.$dirty">
-                                <span ng-show="createLeague.leagueName.$error.required">League Name is Required</span>
-                                <span ng-show="createLeague.leagueName.$error.maxlength">League Name Cannot be More Than 50 Characters</span>
+                        <!-- EMAIL -->
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && userForm.email.$dirty }">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" ng-model="user.email" ng-maxlength="50" required>
+                            <span class="help-block has-error" ng-if="userForm.email.$dirty">
+                                <span ng-show="userForm.email.$error.required">Email is Required</span>
+                                <span ng-show="userForm.email.$error.maxlength">Email Cannot be More Than 50 Characters</span>
                             </span>
                         </div>
-                    </div>
-                    <button class="btn btn-lg btn-primary" id="custom-button2" type="submit" ng-disabled="createLeague.$invalid">
-                        <span ng-show="!createLeagueForm.loading">Create League</span>
-                        <span></span>
-                        <span></span>
-                    </button>
+
+                        <!-- FIRST NAME -->
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.firstName.$invalid && userForm.firstName.$dirty }">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" name="firstName" id="firstName" ng-model="user.firstName" ng-maxlength="50" required>
+                            <span class="help-block has-error" ng-if="userForm.firstName.$dirty">
+                                <span ng-show="userForm.firstName.$error.required">First Name is Required</span>
+                                <span ng-show="userForm.firstName.$error.maxlength">First Name Cannot be More Than 50 Characters</span>
+                            </span>
+                        </div>
+
+                        <!-- LAST NAME -->
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.lastName.$invalid && userForm.lastName.$dirty }">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" name="lastName" id="lastName" ng-model="user.lastName" ng-maxlength="50" required>
+                            <span class="help-block has-error" ng-if="userForm.lastName.$dirty">
+                                <span ng-show="userForm.lastName.$error.required">Last Name is Required</span>
+                                <span ng-show="userForm.lastName.$error.maxlength">Last Name Cannot be More Than 50 Characters</span>
+                            </span>
+                        </div>
+
+                        <!-- PASSWORD -->
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && userForm.password.$dirty }">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" ng-model="user.password" ng-minlength="6" ng-maxlength="50" required>
+                            <span class="help-block has-error" ng-if="userForm.password.$dirty">
+                                <span ng-show="userForm.password.$error.required">Password is Required</span>
+                                <span ng-show="userForm.password.$error.maxlength">Password Cannot be More Than 50 Characters</span>
+                            </span>
+                        </div>
+
+                        <!-- PASSWORD CONFIRMATION -->
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.passwordConfirmation.$invalid && userForm.passwordConfirmation.$dirty }">
+                            <label for="passwordConfirmation">Confirm Password</label>
+                            <input type="password" class="form-control" name="passwordConfirmation" id="passwordConfirmation" ng-model="user.passwordConfirmation" compare-to="user.password" required>
+                            <span class="help-block has-error" ng-if="userForm.passwordConfirmation.$dirty">
+                                <span ng-show="userForm.passwordConfirmation.$error.compareTo">Passwords Must Match</span>
+                                <br>
+                                <span ng-show="userForm.passwordConfirmation.$error.required">Password Confirmation is Required</span>
+                            </span>
+                        </div>
+
+                        <!-- CREATE ACCOUNT -->
+                        <button class="btn btn-lg btn-primary" id="" type="submit" ng-disabled="userForm.$invalid">
+                            <span ng-show="!userForm.loading">Create Account</span>
+                            <span class="draftapp-loading-spinner fa fa-spinner" ng-show="signupForm.loading" ></span>
+                            <span ng-show="userForm.loading">Creating account...</span>
+                        </button>
+
+                    </form>
+
+
                 </div>
-            </form>
-
-
+            </div>
         </div>
-        <!-- <footer class="footer"><h5>built by fantasy players for fantasy players</h5></footer> -->
     </body>
 </html>
-
-
-
-
-
-<!--             <form ng-submit="submitCreateLeagueForm()" id="createLeague-form" name="createLeague">
-                <div id="input-container">
-                    <div class="row">
-                        <div class="control-group form-group col-md-6" ng-class="{'has-error':createLeague.leagueName.$invalid && createLeague.leagueName.$dirty"></div>
-                            <label for="leagueName" class="input-label">League Name</label>
-                            <input type="text" name="leagueName" id="leagueName" class="form-control" ng-model="createLeagueForm.leagueName" ng-maxlength="100" required>
-                            <span class="help-block has-error" ng-if="createLeague.leagueName.$dirty">
-                                <span ng-show="createLeague.leagueName.$error.required">League Name is Required</span>
-                                <span ng-show="createLeague.leagueName.$error.maxlength">League Name Cannot be More Than 100 Characters</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </form> -->

@@ -13,8 +13,6 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4" id="form-container">
-
-
                     <!-- FORM -->
                     <form name="userForm" id="userForm" ng-submit="submitUserForm()" novalidate>
 
@@ -72,14 +70,13 @@
                         <!-- CREATE ACCOUNT -->
                         <button class="btn btn-lg btn-primary" id="" type="submit" ng-disabled="userForm.$invalid">
                             <span ng-show="!userForm.loading">Create Account</span>
-                            <span class="draftapp-loading-spinner fa fa-spinner" ng-show="signupForm.loading" ></span>
+<!--                             <span class="draftapp-loading-spinner fa fa-spinner" ng-show="signupForm.loading" ></span>
                             <br>
-                            <span ng-show="userForm.loading">Creating account...</span>
+                            <span ng-show="userForm.loading">Creating account...</span> -->
                         </button>
                         <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
                     </form>
-
-
                 </div>
             </div>
         </div>

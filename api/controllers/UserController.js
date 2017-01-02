@@ -69,6 +69,65 @@ module.exports = {
                 });
             }
         });
+    },
+
+
+    // Login as a user if the entered email and password match a user in the db
+    login: function(req, res) {
+
+        // Try to lookup user using the provided email
+        User.findOne({
+            email: req.param('email')
+        }, function foundUser(err, user) {
+            if (err) return res.negotiate(err);
+            if (!user) return res.notFound();
+
+            // Compare password attempt from the form params to the encypted password from the database ('user.password')
+            require('machinepack-passwords').checkPassword({
+                passwordAttempt: req.param('password'),
+                encryptedPassword: user.encryptedPassword
+            }).exec({
+
+                error: function(err){
+                    return res.negotiate(err);
+                },
+
+                // If the password from the form params doesn't checkout with the encrypted password from the database....
+                incorrect: function() {
+                    return res.notFound();
+                },
+
+                success: function() {
+
+                    // Store user id in the user session
+                    req.session.me = user.id;
+
+                    // All done, let the client know that everything worked
+                    return res.ok();
+                }
+            });
+        });
+    },
+
+
+    // Log out of user account
+    logout: function(req, res) {
+
+        // Lookup user record in db from the id in the user session (req.session.me)
+        User.findOne(req.session.me, function foundUser(err, user) {
+            if(err) return res.negotiate(err);
+
+            // If session refers to user who no longer exists, still allow log out
+            if(!user) {
+                sails.log.verbose('Session refers to a user who no longer exists');
+                return res.backToHomePage();
+            }
+
+            // Log out
+            req.session.me = null;
+
+            // Redirect to homepage or send a 200
+            return res.backToHomePage();
+        });    
     }
 };
-

@@ -5,7 +5,43 @@
     </head>
     <body class="page-body" ng-app="LoginModule" ng-controller="LoginCtrl" ng-cloak>
         <div class="container-fluid">
-            Login page
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4" id="signup-form-container">
+                    <!-- FORM -->
+                    <form name="login" id="login" ng-submit="submitLoginForm()" novalidate>
+
+                        <!-- EMAIL -->
+                        <div class="form-group" ng-class="{ 'has-error' : login.email.$invalid && login.email.$dirty }">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" ng-model="loginForm.email" ng-maxlength="50" required>
+                            <span class="help-block has-error" ng-if="login.email.$dirty" ng-cloak>
+                                <span ng-show="login.email.$error.required">Email is Required</span>
+                                <span ng-show="login.email.$error.maxlength">Email Cannot be More Than 50 Characters</span>
+                            </span>
+                        </div>
+
+                        <!-- PASSWORD -->
+                        <div class="form-group" ng-class="{ 'has-error' : login.password.$invalid && login.password.$dirty }">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" ng-model="loginForm.password" ng-minlength="6" ng-maxlength="50" required>
+                            <span class="help-block has-error" ng-if="login.password.$dirty">
+                                <span ng-show="login.password.$error.required">Password is Required</span>
+                                <span ng-show="login.password.$error.maxlength">Password Cannot be More Than 50 Characters</span>
+                            </span>
+                        </div>
+
+                        <!-- SUBMIT BUTTON -->
+                        <button type="submit" class="btn btn-lg btn-primary" id="loginBtn" ng-disabled="login.$invalid">
+                            <span ng-show="!loginForm.loading">Sign in</span>
+                            <span ng-show="loginForm.loading" class="fa fa-spinner"></span>
+                            <span ng-show="loginForm.loading">Signing in...</span>
+                        </button>
+                        <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+                    </form>
+
+                    </form>
+                </div>
+            </div>
         </div>
     </body>
 </html>

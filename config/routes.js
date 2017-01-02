@@ -32,24 +32,29 @@ module.exports.routes = {
 *                                                                          *
 ***************************************************************************/
 
-	'/': {
-	view: 'homepage'
-	},
+	// '/': {
+	// view: 'homepage'
+	// },
 
 	//////////////////////////////////////////////////////////
 	//	SERVER RENDERED HTML PAGES
 	//////////////////////////////////////////////////////////
 	
-	'GET /'			: {view : 'homepage'},
-	'GET /homepage'	: {view : 'homepage'},
-	'GET /login'	: {view : 'login'},
-	'GET /signup'	: {view : 'signup'},
+	'GET /'			 : 'PageController.showHomePage',
+	'GET /homepage'	 : {view : 'homepage'},
+	'GET /login'	 : {view : 'login'},
+	'GET /signup'	 : {view : 'signup'},
+	'GET /dashboard' : {view : 'dashboard'},
 
 
 	//////////////////////////////////////////////////////////
 	// JSON API
 	//////////////////////////////////////////////////////////
-	'POST /signup'	: 'UserController.signup'
+
+	// User enrollment & authentication
+	'POST /signup' 	: 'UserController.signup',
+	'PUT /login' 	: 'UserController.login',
+	'GET /logout' 	: 'UserController.logout'
 
 
 /***************************************************************************

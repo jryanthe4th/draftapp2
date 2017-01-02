@@ -1,21 +1,21 @@
 angular.module('SignupModule').controller('SignupCtrl', ['$scope', '$http', 'toastr', function($scope, $http, toastr) {
 
-    // Set userForm loading state 
-    $scope.userForm = {
+    // Set signupForm loading state 
+    $scope.signupForm = {
         loading: false
     }
 
-    // Submit userForm
-    $scope.submitUserForm = function() {
+    // Submit signupForm
+    $scope.submitSignupForm = function() {
 
-        $scope.userForm.loading = true;
+        $scope.signupForm.loading = true;
 
         $http.post('/signup', {
 
-            email       : $scope.userForm.email,
-            firstName   : $scope.userForm.firstName,
-            lastName    : $scope.userForm.lastName,
-            password    : $scope.userForm.password
+            email       : $scope.signupForm.email,
+            firstName   : $scope.signupForm.firstName,
+            lastName    : $scope.signupForm.lastName,
+            password    : $scope.signupForm.password
             
         })
         .then(function onSuccess(sailsResponse) {
@@ -33,7 +33,7 @@ angular.module('SignupModule').controller('SignupCtrl', ['$scope', '$http', 'toa
             }
         })
         .finally(function eitherWay() {
-            $scope.userForm.loading = false;
+            $scope.signupForm.loading = false;
         });
     };
 

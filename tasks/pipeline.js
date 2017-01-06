@@ -44,6 +44,8 @@ var jsFilesToInject = [
 	'js/public/login/LoginCtrl.js',
 	'js/public/signup/SignupModule.js',
 	'js/public/signup/SignupCtrl.js',
+	'js/public/dashboard/DashboardModule.js',
+	'js/public/dashboard/DashboardCtrl.js',
 	'js/**/*.js'
 ];
 

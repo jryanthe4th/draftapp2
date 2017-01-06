@@ -40,11 +40,14 @@ module.exports.routes = {
 	//	SERVER RENDERED HTML PAGES
 	//////////////////////////////////////////////////////////
 	
-	'GET /'			 : 'PageController.showHomePage',
+	// PUBLIC PAGES
 	'GET /homepage'	 : {view : 'homepage'},
 	'GET /login'	 : {view : 'login'},
 	'GET /signup'	 : {view : 'signup'},
-	'GET /dashboard' : {view : 'dashboard'},
+
+	// PRIVATE PAGES
+	'GET /'			 : 'PageController.showHomePage',
+	'GET /dashboard' : 'PageController.showDashboardPage',
 
 
 	//////////////////////////////////////////////////////////

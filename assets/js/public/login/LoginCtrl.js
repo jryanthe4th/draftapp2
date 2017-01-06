@@ -2,7 +2,7 @@ angular.module('LoginModule').controller('LoginCtrl', ['$scope', '$http', 'toast
 
     $scope.loginForm = {
         loading: false 
-    }
+    };
 
     // Log In
     $scope.submitLoginForm = function() {
@@ -17,7 +17,7 @@ angular.module('LoginModule').controller('LoginCtrl', ['$scope', '$http', 'toast
         })
         .then(function onSuccess() {
             // Refresh the page now that user is logged in
-            window.location = '/'
+            window.location = '/';
         })
         .catch(function onError(sailsResponse) {
             // Handle known error types

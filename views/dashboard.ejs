@@ -2,10 +2,15 @@
 <html>
     <head>
         <title>Welcome, <%= me.firstName %>!</title>
+        <script type="text/javascript">
+            window.SAILS_LOCALS = { _csrf: '<%= _csrf %>', me: <%- JSON.stringify(me) %> };
+        </script>
     </head>
-    <body class="page-body">
+    <body class="page-body" ng-app="DashboardModule" ng-controller="DashboardCtrl" ng-cloak>
         <div class="container-fluid">
-            <h1>user dashboard</h1>
+            <div class="row">
+                <h1>user dashboard</h1>
+            </div>
         </div>
     </body>
 </html>

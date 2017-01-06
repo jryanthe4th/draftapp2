@@ -104,6 +104,9 @@ module.exports = {
 
                     // All done, let the client know that everything worked
                     return res.ok();
+                    return res.json({
+                        isLoggedIn: true
+                    });
                 }
             });
         });

@@ -1,1 +1,2 @@
-angular.module('HomepageModule', []);
+angular
+    .module('HomepageModule', []);

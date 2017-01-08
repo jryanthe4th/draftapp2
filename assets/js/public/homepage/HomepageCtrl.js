@@ -1,3 +1,5 @@
-angular.module('HomepageModule').controller('HomepageCtrl', ['$scope', '$http', function($scope, $http) {
+angular
+    .module('HomepageModule')
+    .controller('HomepageCtrl', ['$scope', '$http', function($scope, $http) {
 
 }]);

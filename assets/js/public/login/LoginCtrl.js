@@ -1,4 +1,6 @@
-angular.module('LoginModule').controller('LoginCtrl', ['$scope', '$http', 'toastr', function($scope, $http, toastr) {
+angular
+    .module('LoginModule')
+    .controller('LoginCtrl', ['$scope', '$http', 'toastr', function($scope, $http, toastr) {
 
     $scope.loginForm = {
         loading: false 

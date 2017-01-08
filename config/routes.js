@@ -47,7 +47,7 @@ module.exports.routes = {
 
 	// PRIVATE PAGES
 	'GET /'			 : 'PageController.showHomePage',
-	'GET /dashboard' : 'PageController.showDashboardPage',
+	'GET /dashboard' : 'PageController.showHomePage',
 
 
 	//////////////////////////////////////////////////////////

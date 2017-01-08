@@ -27,16 +27,16 @@
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>
                     </button>
-                    <a class="navbar-brand page-scroll" id="navbar-title" href="/">DynastyDraftBoard</a>
+                    <a class="navbar-brand" id="navbar-title" data-target="" href="/">DynastyDraftBoard</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right" id="navbar-ul">
                         <!-- Hidden li included to remove active class from intro link when scrolled up past intro section -->
                         <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
-                        <li ng-if="me.id"><a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="/login">Log In</a></li>
-                        <li ng-show="me.id"><a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="/signup">Sign Up</a></li>
-                        <li ng-hide="me.id"><a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="/dashboard">Dashboard</a></li>
-                        <li><a class="page-scroll" data-toggle="collapse" data-target=".navbar-collapse" href="/logout">Log Out</a></li>
+                        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/signup">Sign Up</a></li>
+                        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/login">Log In</a></li>
+                        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/dashboard">Dashboard</a></li>
+                        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/logout">Log Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,7 +54,6 @@
 	<script src="/js/dependencies/sails.io.js"></script>
 	<script src="/js/dependencies/angular.js"></script>
 	<script src="/js/dependencies/jquery-3.1.1.min.js"></script>
-	<script src="/js/dependencies/jquery.easing.min.js"></script>
 	<script src="/js/dependencies/angular-animate.min.js"></script>
 	<script src="/js/dependencies/angular-toastr.js"></script>
 	<script src="/js/dependencies/bootstrap.js"></script>
@@ -62,6 +61,7 @@
 	<script src="/js/dependencies/compareTo.module.js"></script>
 	<script src="/js/dependencies/jquery-ui.js"></script>
 	<script src="/js/dependencies/jquery-ui.min.js"></script>
+	<script src="/js/dependencies/jquery.easing.min.js"></script>
 	<script src="/js/dependencies/scrolling-nav.js"></script>
 	<script src="/js/dependencies/ui-bootstrap-tpls.js"></script>
 	<script src="/js/public/homepage/HomepageModule.js"></script>
@@ -70,8 +70,10 @@
 	<script src="/js/public/login/LoginCtrl.js"></script>
 	<script src="/js/public/signup/SignupModule.js"></script>
 	<script src="/js/public/signup/SignupCtrl.js"></script>
-	<script src="/js/public/dashboard/DashboardModule.js"></script>
-	<script src="/js/public/dashboard/DashboardCtrl.js"></script>
+	<script src="/js/private/dashboard/DashboardModule.js"></script>
+	<script src="/js/private/dashboard/DashboardCtrl.js"></script>
+	<script src="/js/public/navbar/navCtrl.js"></script>
+	<script src="/js/public/navbar/navModule.js"></script>
 	<!--SCRIPTS END-->
 	</body>
 </html>

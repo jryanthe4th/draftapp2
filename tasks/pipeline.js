@@ -31,9 +31,9 @@ var jsFilesToInject = [
 	// Dependencies like jQuery, or Angular are brought in here
 	'js/dependencies/angular.min.js',
 	'js/dependencies/angular.js',
-	'js/dependencies/jquery.min.js',
+	// 'js/dependencies/jquery.min.js',
 	'js/dependencies/jquery-3.1.1.min.js',
-	'js/dependencies/jquery.easing.min.js',
+	// 'js/dependencies/jquery.easing.min.js',
 	'js/dependencies/**/*.js',
 
 	// All of the rest of your client-side js files
@@ -44,8 +44,8 @@ var jsFilesToInject = [
 	'js/public/login/LoginCtrl.js',
 	'js/public/signup/SignupModule.js',
 	'js/public/signup/SignupCtrl.js',
-	'js/public/dashboard/DashboardModule.js',
-	'js/public/dashboard/DashboardCtrl.js',
+	'js/private/dashboard/DashboardModule.js',
+	'js/private/dashboard/DashboardCtrl.js',
 	'js/**/*.js'
 ];
 

@@ -17,7 +17,7 @@ module.exports.models = {
   * connections (see `config/connections.js`)                                *
   *                                                                          *
   ***************************************************************************/
-  // connection: 'localDiskDb',
+  connection: 'localMongoDb',
 
   /***************************************************************************
   *                                                                          *
@@ -27,9 +27,9 @@ module.exports.models = {
   * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-  // migrate: 'safe'
+  migrate: 'safe'
   // migrate: 'alter'
-  migrate: 'drop'
+  // migrate: 'drop'
   // 
   //  1. safe  - never auto-migrate my database(s). I will do it myself (by hand) 
   //  2. alter - auto-migrate, but attempt to keep my existing data (experimental)

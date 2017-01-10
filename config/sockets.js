@@ -45,12 +45,11 @@ module.exports.sockets = {
   //
 
   // adapter: 'socket.io-redis',
-  // host: '127.0.0.1',
-  // port: 6379,
-  // db: 0,
-  // pass: '<redis auth password>',
-
-
+  // user: 'redistogo',
+  // pass: '76e49306e064e282287697cfc2a450c3',
+  // host: 'crestfish.redistogo.com',
+  // port: 11582,
+  
 
  /***************************************************************************
   *                                                                          *
@@ -65,7 +64,7 @@ module.exports.sockets = {
   *                                                                          *
   ***************************************************************************/
 
-  // grant3rdPartyCookie: true,
+  //grant3rdPartyCookie: true,
 
 
 
@@ -109,7 +108,7 @@ module.exports.sockets = {
   // beforeConnect: function(handshake, cb) {
   //   // `true` allows the connection
   //   return cb(null, true);
-  //
+  
   //   // (`false` would reject the connection)
   // },
 
@@ -136,6 +135,6 @@ module.exports.sockets = {
   * transport should be disabled.                                            *
   *                                                                          *
   ***************************************************************************/
-  // transports: ["polling", "websocket"]
+  //transports: ["polling", "websocket"]
 
 };

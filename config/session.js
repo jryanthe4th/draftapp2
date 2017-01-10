@@ -51,13 +51,17 @@ module.exports.session = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
+//redis://redistogo:76e49306e064e282287697cfc2a450c3@crestfish.redistogo.com:11582/
+  
+  // host: 'crestfish.redistogo.com',
+  // port: 11582,
+  // user: 'redistogo',
+  // pass: '76e49306e064e282287697cfc2a450c3',
+  
 
-  // host: 'localhost',
-  // port: 6379,
-  // ttl: <redis session TTL in seconds>,
-  // db: 0,
-  // pass: <redis auth password>,
   // prefix: 'sess:',
+  //ttl: <redis session TTL in seconds>,
+  // db: 0,
 
 
   /***************************************************************************

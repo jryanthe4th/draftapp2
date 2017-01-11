@@ -19,6 +19,8 @@ module.exports.models = {
   ***************************************************************************/
   connection: 'mongoLabMongoDb',
 
+// MONGODB_URI=mongodb://heroku_5d73000r:5b9cpkoovrq71k00mid799g33o@ds159328.mlab.com:59328/heroku_5d73000r sails lift
+
   /***************************************************************************
   *                                                                          *
   * How and whether Sails will attempt to automatically rebuild the          *

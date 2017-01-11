@@ -69,5 +69,100 @@ module.exports = {
     //         });
     //     });
     // }
+    
+    showCreateLeaguePage: function(req, res) {
+
+        // If not logged in, show the public view
+        if(!req.session.me) {
+            return res.view('homepage');
+        }
+
+        // Otherwise, look up the logged in user and show the user dashboard view
+        User.findOne(req.session.me, function(err, user){
+            if(err) {
+                return res.negotiate(err);
+            }
+
+            if(!user) {
+                sails.log.verbose('Session refers to a user who no longer exists -- did you delete a user, then try to refresh the page with an open tab logged-in as that user?');
+                return res.view('homepage');
+            }
+
+            return res.view('createleague', {
+                me: {
+                    id          : user.id,
+                    firstName   : user.firstName,
+                    lastName    : user.lastName,
+                    email       : user.email,
+                    isAdmin     : !!user.admin,
+                    gravatarUrl : user.gravatarUrl
+                }
+            });
+        });
+    },
+
+
+    showJoinLeaguePage: function(req, res) {
+
+        // If not logged in, show the public view
+        if(!req.session.me) {
+            return res.view('homepage');
+        }
+
+        // Otherwise, look up the logged in user and show the user dashboard view
+        User.findOne(req.session.me, function(err, user){
+            if(err) {
+                return res.negotiate(err);
+            }
+
+            if(!user) {
+                sails.log.verbose('Session refers to a user who no longer exists -- did you delete a user, then try to refresh the page with an open tab logged-in as that user?');
+                return res.view('homepage');
+            }
+
+            return res.view('joinleague', {
+                me: {
+                    id          : user.id,
+                    firstName   : user.firstName,
+                    lastName    : user.lastName,
+                    email       : user.email,
+                    isAdmin     : !!user.admin,
+                    gravatarUrl : user.gravatarUrl
+                }
+            });
+        });
+    },
+
+
+    showMyLeaguesPage: function(req, res) {
+
+        // If not logged in, show the public view
+        if(!req.session.me) {
+            return res.view('homepage');
+        }
+
+        // Otherwise, look up the logged in user and show the user dashboard view
+        User.findOne(req.session.me, function(err, user){
+            if(err) {
+                return res.negotiate(err);
+            }
+
+            if(!user) {
+                sails.log.verbose('Session refers to a user who no longer exists -- did you delete a user, then try to refresh the page with an open tab logged-in as that user?');
+                return res.view('homepage');
+            }
+
+            return res.view('myleagues', {
+                me: {
+                    id          : user.id,
+                    firstName   : user.firstName,
+                    lastName    : user.lastName,
+                    email       : user.email,
+                    isAdmin     : !!user.admin,
+                    gravatarUrl : user.gravatarUrl
+                }
+            });
+        });
+    }
 };
 

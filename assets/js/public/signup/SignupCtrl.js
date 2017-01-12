@@ -27,7 +27,7 @@ angular
 
             // Handle known error type
             // If using sails-disk adapter -- handle duplicate key
-            var emailAddressAlreadyInUse = sailsResponse.status = 409;
+            var emailAddressAlreadyInUse = sailsResponse.status == 409;
 
             if(emailAddressAlreadyInUse) {
                 toastr.error('That email address is already in use, please try again.', 'Error');

@@ -4,7 +4,7 @@ angular
 
     $scope.loginForm = {
         loading: false 
-    };
+    }
 
     // Log In
     $scope.submitLoginForm = function() {
@@ -24,7 +24,7 @@ angular
         .catch(function onError(sailsResponse) {
             // Handle known error types
             // Invalide username / password combination
-            if(sailsResponse.status == 400 || 404) {
+            if(sailsResponse.status === 400 || 404) {
                 toastr.error('Invalid email/password combination.', 'Error', {
                     closeButton: true
                 });

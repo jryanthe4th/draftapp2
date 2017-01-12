@@ -1,1 +1,2 @@
-angular.module('LoginModule', ['toastr', 'compareTo']);
+angular
+    .module('LoginModule', ['toastr', 'compareTo']);

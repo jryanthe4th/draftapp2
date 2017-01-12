@@ -48,6 +48,12 @@ var jsFilesToInject = [
 	'js/public/navbar/NavCtrl.js',
 	'js/private/dashboard/DashboardModule.js',
 	'js/private/dashboard/DashboardCtrl.js',
+	'js/private/createleague/CreateLeagueModule.js',
+	'js/private/createleague/CreateLeagueCtrl.js',
+	'js/private/joinleague/JoinLeagueModule.js',
+	'js/private/joinleague/JoinLeagueCtrl.js',
+	'js/private/myleagues/MyLeaguesModule.js',
+	'js/private/myleagues/MyLeaguesCtrl.js',
 	'js/**/*.js'
 ];
 

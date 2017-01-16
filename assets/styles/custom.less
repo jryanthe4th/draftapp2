@@ -59,8 +59,19 @@
     }
 }
 
+// PREVENTS NAVBAR FROM FLASHING ON PAGE LOAD
 [ng\:cloak], [ng-cloak], .ng-cloak {
 display: none !important;
+}
+
+select {
+    font-size: 20px;
+    color: #ffffff;
+    border-color: #22A7F0;
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 2px #2175c0,#2175c0 0 0 11px 3px inset;
+    text-shadow: 0 0 5px #2175c0,0 0 10px #2175c0,0 0 20px #2175c0,0 0 30px #2175c0,0 0 40px #22A7F0,0 0 55px #22A7F0;
 }
 
 ////////////////////////////////////////
@@ -167,7 +178,7 @@ display: none !important;
 
 label {
     color: #fff !important;
-    float: left !important;
+    float: left;
     padding-top: 10px;
     //text-shadow: 0 0 5px #1fc139,0 0 10px #1fc139,0 0 20px #1fc139,0 0 30px #1fc139,0 0 40px #11691f,0 0 55px #11691f;
     //text-shadow: 0 0 5px #ce08d7,0 0 10px #ce08d7,0 0 20px #ce08d7,0 0 30px #ce08d7,0 0 40px #700475,0 0 55px #700475;
@@ -217,11 +228,26 @@ span.help-block.has-error.ng-scope{
         text-shadow: 0 0 5px #ce08d7,0 0 10px #ce08d7,0 0 20px #ce08d7,0 0 30px #ce08d7,0 0 40px #700475,0 0 55px #700475;
 }
 
-select {
-    color: #22A7F0 !important;
-    text-align: center !important;
-    // width: 20% !important;
+// select {
+//     color: #22A7F0 !important;
+//     text-align: center !important;
+//     // width: 20% !important;
+// }
+
+
+////////////////////////////////////////
+///     CREATE LEAGUE PAGE
+////////////////////////////////////////
+#create-league-container {
+    padding-left: 6%;
+    padding-right: 6%;
 }
 
+#createLeague {
+
+    label {
+        float: none;
+    }
+}
 
 

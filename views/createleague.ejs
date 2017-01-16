@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
     <head>
         <title>Welcome, <%= me.firstName %>!</title>
@@ -9,7 +9,43 @@
     <body class="page-body" ng-app="CreateLeagueModule" ng-controller="CreateLeagueCtrl" ng-cloak>
         <div class="container-fluid">
             <div class="row">
-                <h1>create league page</h1>
+                <div class="col-sm-4 col-sm-offset-4" id="create-league-container">
+                    <form name="createLeague" id="createLeague" ng-submit="submitCreateLeagueForm()" novalidate>
+                        
+                        <!-- LEAGUE NAME -->
+                        <div class="form-group" ng-class="{ 'has-error' : createLeague.leagueName.$invalid && createLeague.leagueName.$dirty }">
+                            <label for="leagueName">League Name</label>
+                            <input type="text" class="form-control" name="leagueName" id="leagueName" ng-model="createLeagueForm.leagueName" ng-maxlength="50" required>
+                            <span class="help-block has-error" ng-if="createLeague.leagueName.$dirty" ng-cloak>
+                                <span ng-show="createLeague.leagueName.$error.required">League Name is Required</span>
+                                <span ng-show="createLeague.leagueName.$error.maxlength">League Name Cannot be More Than 50 Characters</span>
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label id="num-teams-label"># Teams</label><br>
+                            <select class="teams-select" name="num-teams" ng-model="createLeagueForm.teams" ng-options="opt for opt in ['2','3','4','5','6','7','8','9','10','11','12']" required>
+                                <option></option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label id="num-rounds-label"># Rounds</label><br>
+                            <select class="rounds-select" name="num-rounds" ng-model="createLeagueForm.rounds" ng-options="opt for opt in ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16']" required>
+                                <option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option>
+                            </select>
+                        </div>
+
+                        <!-- Disable signup button until the form has no errors -->
+                        <button type="submit" class="btn btn-lg btn-primary" id="createLeagueButton" ng-disabled="createLeague.$invalid">
+                            <span ng-show="!createLeagueForm.loading">CREATE LEAGUE</span>
+                            <span ng-show="createLeagueForm.loading" class="fa fa-spinner"></span>
+                            <span ng-show="createLeagueForm.loading">CREATING LEAGUE...</span>
+                        </button>
+
+                        <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+                    </form>
+                </div>
             </div>
         </div>
     </body>

@@ -51,6 +51,7 @@ module.exports.routes = {
 	'GET /createleague' : 'PageController.showCreateLeaguePage',
 	'GET /joinleague' 	: 'PageController.showJoinLeaguePage',
 	'GET /myleagues' 	: 'PageController.showMyLeaguesPage',
+	'GET /draftboard'   : 'PageController.showDraftboardPage',
 
 
 	//////////////////////////////////////////////////////////
@@ -60,7 +61,10 @@ module.exports.routes = {
 	// User enrollment & authentication
 	'POST /signup' 	: 'UserController.signup',
 	'PUT /login' 	: 'UserController.login',
-	'GET /logout' 	: 'UserController.logout'
+	'GET /logout' 	: 'UserController.logout',
+
+	// League creation
+	'POST /league'  : 'LeagueController.createLeague'
 
 
 /***************************************************************************

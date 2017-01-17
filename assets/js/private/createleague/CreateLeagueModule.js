@@ -1,2 +1,2 @@
 angular
-    .module('CreateLeagueModule', []);
+    .module('CreateLeagueModule', ['toastr', 'compareTo']);

@@ -14,7 +14,8 @@ module.exports = {
             // Create a League with the params sent from the createLeagueForm --> createleague.ejs
             leagueName      : req.param('leagueName'),
             numberOfTeams   : req.param('numberOfTeams'),
-            numberOfRounds  : req.param('numberOfRounds')
+            numberOfRounds  : req.param('numberOfRounds'),
+            leagueCreator   : req.session.me
 
         }, function leagueCreated(err, newLeague) {
             if(err) {

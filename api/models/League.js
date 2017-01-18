@@ -17,14 +17,18 @@ module.exports = {
 
         // The Number of Teams in the League
         numberOfTeams: {
-            type: 'numeric',
+            type: 'int',
             required: true
         },
 
         // The Number of Rounds in the Draft
         numberOfRounds: {
-            type: 'numeric',
+            type: 'int',
             required: true
+        },
+
+        leagueCreator: {
+            type: 'string'
         }
 
     }

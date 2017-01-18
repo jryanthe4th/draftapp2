@@ -187,9 +187,6 @@ module.exports = {
             return res.view('draftboard', {
                 me: {
                     id              : user.id,
-                    //leagueName      : league.leagueName,
-                    //numberOfTeams   : league.numberOfTeams,
-                    //numberOfRounds  : league.numberOfRounds,
                     firstName       : user.firstName,
                     lastName        : user.lastName,
                     email           : user.email,

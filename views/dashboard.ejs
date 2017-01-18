@@ -11,10 +11,19 @@
             <div class="row">
                 <div id="my-leagues">
                     <a href="/myleagues" class="btn btn-lg btn-primary">MY LEAGUES</a>
+                        <div>
+                            <ul>
+                                <li ng-repeat="leagueName in attributes.leagueName">{{ leagueName.leagueName }}</li>
+                            </ul>
+                        </div>
                 </div>
+            </div>
+            <div class="row">
                 <div id="join-league">
                     <a href="/joinleague" class="btn btn-lg btn-primary">JOIN LEAGUE</a>
                 </div>
+            </div>
+            <div class="row">
                 <div id="create-league">
                     <a href="/createleague" class="btn btn-lg btn-primary">CREATE LEAGUE</a>
                 </div>

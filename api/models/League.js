@@ -27,8 +27,12 @@ module.exports = {
             required: true
         },
 
-        leagueCreator: {
+        leagueMember: {
             type: 'string'
+        },
+
+        isAdmin: {
+            type: 'boolean'
         }
 
     }

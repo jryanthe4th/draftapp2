@@ -59,11 +59,6 @@
     }
 }
 
-// PREVENTS NAVBAR FROM FLASHING ON PAGE LOAD
-[ng\:cloak], [ng-cloak], .ng-cloak {
-display: none !important;
-}
-
 // DROPDOWN SELECTS USED IN CREATE LEAGUE FORM
 select {
     font-size: 20px;
@@ -79,6 +74,11 @@ select {
 ///     NAVBAR
 ////////////////////////////////////////
 
+// PREVENTS NAVBAR FROM FLASHING ON PAGE LOAD
+[ng\:cloak], [ng-cloak], .ng-cloak {
+display: none !important;
+}
+
 
 // BOOTSTRAP CONTAINER
 .navbar {
@@ -87,6 +87,10 @@ select {
     //background-color: #000000;
     //background-image: url("/images/congruent_outline.png");
     background-repeat: repeat;
+
+    aria-expanded {
+
+    }
 }
 
 // LAST ITEM IN LIST
@@ -237,11 +241,54 @@ span.help-block.has-error.ng-scope{
 
 
 ////////////////////////////////////////
+///     DASHBOARD
+////////////////////////////////////////
+.table-responsive {
+    min-width: 100px;
+    max-width: 250px;
+    margin: auto;
+    font-size: 1.1em;  
+    // display: block;
+    text-align: center;
+    border-color: transparent;
+    color: white !important;
+    text-shadow: 0 0 1px #2175c0,0 0 2px #2175c0,0 0 3px #2175c0,0 0 5px #2175c0,0 0 8px #22A7F0,0 0 10px #22A7F0;
+
+    thead tr th {
+        text-align: right;
+        border-color: grey;
+        border-width: 1px;
+        font-size: 1.2em;
+    }
+
+    tbody tr td {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        text-align: left;
+
+        a {
+            color: white;
+
+            &:hover {
+                text-decoration: none;
+                //color: #DB0A5B;
+                color: yellow;
+            }
+        }
+    }
+}
+
+#my-leagues {
+    margin-bottom: 25px;
+}
+
+
+////////////////////////////////////////
 ///     CREATE LEAGUE PAGE
 ////////////////////////////////////////
 #create-league-container {
     padding-left: 6%;
     padding-right: 6%;
+    padding-bottom: 25px;
 }
 
 #createLeague {

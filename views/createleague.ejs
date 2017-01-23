@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-sm-4 col-sm-offset-4" id="create-league-container">
                     <form name="createLeague" id="createLeague" ng-submit="submitCreateLeagueForm()" novalidate>
-                        
+                 
                         <!-- LEAGUE NAME -->
                         <div class="form-group" ng-class="{ 'has-error' : createLeague.leagueName.$invalid && createLeague.leagueName.$dirty }">
                             <label for="leagueName" id="league-name-label">League Name</label>
@@ -21,7 +21,7 @@
                                 <span ng-show="createLeague.leagueName.$error.maxlength">League Name Cannot be More Than 50 Characters</span>
                             </span>
                         </div>
-
+                               
                         <!-- NUMBER OF TEAMS -->
                         <div class="form-group col-sm-6">
                             <label for="numberOfTeams" id="num-teams-label"># Teams</label><br>

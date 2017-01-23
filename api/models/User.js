@@ -48,6 +48,11 @@ module.exports = {
             type: 'string'
         }
 
+        // leagues: {
+        //     collection: 'league',
+        //     via: 'leagueName'
+        // }
+
         // The User's draft selections
         // draftSelections: {
         //     collection: 'DraftSelection',

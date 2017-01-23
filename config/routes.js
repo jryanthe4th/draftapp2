@@ -47,7 +47,7 @@ module.exports.routes = {
 
 	// PRIVATE PAGES
 	'GET /'			 	: 'PageController.showHomePage',
-	'GET /dashboard' 	: 'PageController.showHomePage',
+	'GET /dashboard' 	: 'PageController.showDashboardPage',
 	'GET /createleague' : 'PageController.showCreateLeaguePage',
 	'GET /joinleague' 	: 'PageController.showJoinLeaguePage',
 	'GET /myleagues' 	: 'PageController.showMyLeaguesPage',

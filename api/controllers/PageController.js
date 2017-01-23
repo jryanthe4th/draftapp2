@@ -39,36 +39,36 @@ module.exports = {
         });
     },
 
-    // showDashboardPage: function(req, res) {
+    showDashboardPage: function(req, res) {
 
-    //     // If not logged in, show the public view
-    //     if(!req.session.me) {
-    //         return res.view('dashboard');
-    //     }
+        // If not logged in, show the public view
+        if(!req.session.me) {
+            return res.view('homepage');
+        }
 
-    //     // Otherwise, look up the logged in user and show the user dashboard view
-    //     User.findOne(req.session.me, function(err, user){
-    //         if(err) {
-    //             return res.negotiate(err);
-    //         }
+        // Otherwise, look up the logged in user and show the user dashboard view
+        User.findOne(req.session.me, function(err, user){
+            if(err) {
+                return res.negotiate(err);
+            }
 
-    //         if(!user) {
-    //             sails.log.verbose('Session refers to a user who no longer exists -- did you delete a user, then try to refresh the page with an open tab logged-in as that user?');
-    //             return res.view('dashboard');
-    //         }
+            if(!user) {
+                sails.log.verbose('Session refers to a user who no longer exists -- did you delete a user, then try to refresh the page with an open tab logged-in as that user?');
+                return res.view('homepage');
+            }
 
-    //         return res.view('dashboard', {
-    //             me: {
-    //                 id          : user.id,
-    //                 firstName   : user.firstName,
-    //                 lastName    : user.lastName,
-    //                 email       : user.email,
-    //                 isAdmin     : !!user.admin,
-    //                 gravatarUrl : user.gravatarUrl
-    //             }
-    //         });
-    //     });
-    // }
+            return res.view('dashboard', {
+                me: {
+                    id          : user.id,
+                    firstName   : user.firstName,
+                    lastName    : user.lastName,
+                    email       : user.email,
+                    isAdmin     : !!user.admin,
+                    gravatarUrl : user.gravatarUrl
+                }
+            });
+        });
+    },
     
     showCreateLeaguePage: function(req, res) {
 
@@ -78,7 +78,7 @@ module.exports = {
         }
 
         // Otherwise, look up the logged in user and show the user create league view
-        User.findOne(req.session.me, function(err, user){
+        User.findOne(req.session.me, function(err, user) {
             if(err) {
                 return res.negotiate(err);
             }
@@ -99,6 +99,14 @@ module.exports = {
                 }
             });
         });
+
+        // League.findOne(req.session.myLeagues, function(err, league) {
+        //    if(err) {
+        //         return res.negotiate(err);
+        //    } 
+
+        //    return res.json('league')
+        // });
     },
 
 

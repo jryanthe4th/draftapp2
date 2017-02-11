@@ -40,8 +40,8 @@ var jsFilesToInject = [
 	// will be injected here in no particular order.
 	'js/public/homepage/HomepageModule.js',
 	'js/public/homepage/HomepageCtrl.js',
-	'js/public/login/LoginModule.js',
-	'js/public/login/LoginCtrl.js',
+	'js/public/signin/SigninModule.js',
+	'js/public/signin/SigninCtrl.js',
 	'js/public/signup/SignupModule.js',
 	'js/public/signup/SignupCtrl.js',
 	'js/private/dashboard/DashboardModule.js',

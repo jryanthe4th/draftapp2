@@ -1,21 +1,21 @@
 angular
-    .module('LoginModule')
-    .controller('LoginCtrl', ['$scope', '$http', 'toastr', function($scope, $http, toastr) {
+    .module('SigninModule')
+    .controller('SigninCtrl', ['$scope', '$http', 'toastr', function($scope, $http, toastr) {
 
-    $scope.loginForm = {
+    $scope.signinForm = {
         loading: false 
     }
 
     // Log In
-    $scope.submitLoginForm = function() {
+    $scope.submitSigninForm = function() {
 
         // Set the loading state (i.e. show loading spinner)
-        $scope.loginForm.loading = true;
+        $scope.signinForm.loading = true;
 
         // Submit request to Sails
-        $http.put('/login', {
-            email: $scope.loginForm.email,
-            password: $scope.loginForm.password
+        $http.put('/signin', {
+            email: $scope.signinForm.email,
+            password: $scope.signinForm.password
         })
         .then(function onSuccess() {
             // Refresh the page now that user is logged in
@@ -37,7 +37,7 @@ angular
             return;
         })
         .finally(function eitherWay() {
-            $scope.loginForm.loading = false;
+            $scope.signinForm.loading = false;
         });
     };
 

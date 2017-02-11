@@ -27,6 +27,12 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
+  // LeagueController  : false,
+  // PageController    : true,
+  // UserController    : {
+  //   '*' : false,
+  //   signup : 'isNewUser'
+  // }, 
 
   /***************************************************************************
   *                                                                          *

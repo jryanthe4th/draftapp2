@@ -16,7 +16,8 @@ module.exports = {
             numberOfTeams   : req.param('numberOfTeams'),
             numberOfRounds  : req.param('numberOfRounds'),
             leagueMember    : req.session.me,
-            isAdmin         : true
+            leagueOwner     : req.session.me,
+            // isAdmin         : true
 
         }, function leagueCreated(err, newLeague) {
             if(err) {

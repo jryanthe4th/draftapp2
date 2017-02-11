@@ -46,6 +46,11 @@ module.exports = {
         // The User's gravatar image
         gravatarUrl: {
             type: 'string'
+        },
+
+        leagues: {
+            collection: 'league',
+            via: 'leagueOwner'
         }
 
         // leagues: {

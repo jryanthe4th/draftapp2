@@ -1,0 +1,28 @@
+.btn-primary-mixin() {
+    color: @white;
+    border-color: @blue-light;
+    background-color: @background-color;
+    border-radius: 0px;
+    width: 12em;
+    margin: 20px;
+    box-shadow: 0 0 15px 2px @blue-dark,@blue-dark 0 0 11px 3px inset;
+    text-shadow: 0 0 5px @blue-dark,0 0 10px @blue-dark,0 0 20px @blue-dark,0 0 30px @blue-dark,0 0 40px @blue-light,0 0 55px @blue-light;
+
+    &:hover {
+        background-color: @background-color;
+    }
+
+    &:focus {
+        color: @white;
+        border-color: @pink-light;
+        background-color: @background-color;
+        box-shadow: 0 0 15px 2px @pink-light,@pink-light 0 0 11px 3px inset;
+        text-shadow: 0 0 5px @pink-light,0 0 10px @pink-light,0 0 20px @pink-light,0 0 30px @pink-light,0 0 40px @pink-dark,0 0 55px @pink-dark;
+    }
+
+    &:disabled {
+        border-color: @blue-light;
+        background-color: @background-color;
+    }   
+}
+

@@ -73,7 +73,7 @@ module.exports = {
 
 
     // Login as a user if the entered email and password match a user in the db
-    login: function(req, res) {
+    signin: function(req, res) {
 
         // Try to lookup user using the provided email
         User.findOne({
@@ -111,7 +111,7 @@ module.exports = {
 
 
     // Log out of user account
-    logout: function(req, res) {
+    signout: function(req, res) {
 
         // Lookup user record in db from the id in the user session (req.session.me)
         User.findOne(req.session.me, function foundUser(err, user) {

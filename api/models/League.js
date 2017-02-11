@@ -17,23 +17,27 @@ module.exports = {
 
         // The Number of Teams in the League
         numberOfTeams: {
-            type: 'int',
+            type: 'integer',
             required: true
         },
 
         // The Number of Rounds in the Draft
         numberOfRounds: {
-            type: 'int',
+            type: 'integer',
             required: true
+        },
+
+        leagueOwner: {
+            type: 'string',
+            model: 'user'
         },
 
         leagueMember: {
             type: 'string'
         },
 
-        isAdmin: {
-            type: 'boolean'
-        }
-
+        // isAdmin: {
+        //     type: 'boolean'
+        // }
     }
 };

@@ -42,7 +42,7 @@ module.exports.routes = {
 	
 	// PUBLIC PAGES
 	'GET /homepage'	 : {view : 'homepage'},
-	'GET /login'	 : {view : 'login'},
+	'GET /signin'	 : {view : 'signin'},
 	'GET /signup'	 : {view : 'signup'},
 
 	// PRIVATE PAGES
@@ -50,7 +50,7 @@ module.exports.routes = {
 	'GET /dashboard' 	: 'PageController.showDashboardPage',
 	'GET /createleague' : 'PageController.showCreateLeaguePage',
 	'GET /joinleague' 	: 'PageController.showJoinLeaguePage',
-	'GET /myleagues' 	: 'PageController.showMyLeaguesPage',
+	// 'GET /myleagues' 	: 'PageController.showMyLeaguesPage',
 	'GET /draftboard'   : 'PageController.showDraftboardPage',
 
 
@@ -60,8 +60,8 @@ module.exports.routes = {
 
 	// User enrollment & authentication
 	'POST /signup' 	: 'UserController.signup',
-	'PUT /login' 	: 'UserController.login',
-	'GET /logout' 	: 'UserController.logout',
+	'PUT /signin' 	: 'UserController.signin',
+	'GET /signout' 	: 'UserController.signout',
 
 	// League creation
 	'POST /league'  : 'LeagueController.createLeague'

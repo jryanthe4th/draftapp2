@@ -1,0 +1,49 @@
+.navbar-mixin() {
+    border: none;
+    background: @background-color !important;
+
+    &:hover {
+        background: @background-color !important;
+    }
+
+    .icon-bar {
+        width: 22px;
+        background-color: #9d9d9d !important;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s; 
+    }
+
+    .top-bar {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-transform-origin: 10% 10%;
+                transform-origin: 10% 10%;
+    }
+
+    .middle-bar {
+        opacity: 0;
+    }
+
+    .bottom-bar {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 10% 90%;
+                transform-origin: 10% 90%;
+    }
+
+    &.collapsed {
+        .top-bar {
+            -webkit-transform: rotate(0);
+                    transform: rotate(0);
+        }
+
+        .middle-bar {
+            opacity: 1;
+        }
+
+        .bottom-bar {
+            -webkit-transform: rotate(0);
+                    transform: rotate(0);
+        }
+    }
+}

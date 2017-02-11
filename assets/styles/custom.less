@@ -8,11 +8,11 @@
 
 .page-body {
     font-family: 'Jura', serif;
-    color: #ffffff;
+    color: @white;
     // text-transform: uppercase;
     text-align: center;
     min-height: 100%;
-    background-color: #000000;
+    background-color: @black;
     // background-image: url("/images/field1.jpg");
 }
 
@@ -25,49 +25,12 @@
 }   
 
 .btn-primary {
-    color: #ffffff;
-    border-color: #22A7F0;
-    background-color: transparent;
-    border-radius: 0px;
-    width: 12em;
-    margin: 20px;
-    box-shadow: 0 0 15px 2px #2175c0,#2175c0 0 0 11px 3px inset;
-    text-shadow: 0 0 5px #2175c0,0 0 10px #2175c0,0 0 20px #2175c0,0 0 30px #2175c0,0 0 40px #22A7F0,0 0 55px #22A7F0;
-
-    // &:hover {
-    //     color: #fff;
-    //     border-color: #22A7F0;
-    //     background-color: transparent;
-    //     box-shadow: 0 0 15px 2px #2175c0,#2175c0 0 0 11px 3px inset;
-    //     text-shadow: 0 0 5px #2175c0,0 0 10px #2175c0,0 0 20px #2175c0,0 0 30px #2175c0,0 0 40px #22A7F0,0 0 55px #22A7F0;
-    // }
-    &:hover {
-        background-color: transparent;
-    }
-
-    &:focus {
-        color: #fff;
-        border-color: #ce08d7;
-        background-color: transparent;
-        box-shadow: 0 0 15px 2px #ce08d7,#ce08d7 0 0 11px 3px inset;
-        text-shadow: 0 0 5px #ce08d7,0 0 10px #ce08d7,0 0 20px #ce08d7,0 0 30px #ce08d7,0 0 40px #700475,0 0 55px #700475;
-    }
-
-    &:disabled {
-        border-color: #22A7F0;
-        background-color: transparent;
-    }
+    .btn-primary-mixin();
 }
 
 // DROPDOWN SELECTS USED IN CREATE LEAGUE FORM
 select {
-    font-size: 20px;
-    color: #ffffff;
-    border-color: #22A7F0;
-    background-color: transparent;
-    //border-radius: 0px;
-    box-shadow: 0 0 15px 2px #2175c0,#2175c0 0 0 11px 3px inset;
-    text-shadow: 0 0 5px #2175c0,0 0 10px #2175c0,0 0 20px #2175c0,0 0 30px #2175c0,0 0 40px #22A7F0,0 0 55px #22A7F0;
+    .selects-mixin();
 }
 
 ////////////////////////////////////////
@@ -100,53 +63,7 @@ display: none !important;
 
 // NAVBAR BUTTON - THREE BARS TO X ANIMATION
 .navbar-toggle {
-    border: none;
-    background: transparent !important;
-
-    &:hover {
-        background: transparent !important;
-    }
-
-    .icon-bar {
-        width: 22px;
-        background-color: #9d9d9d !important;
-        -webkit-transition: all 0.2s;
-        transition: all 0.2s; 
-    }
-
-    .top-bar {
-        -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-        -webkit-transform-origin: 10% 10%;
-                transform-origin: 10% 10%;
-    }
-
-    .middle-bar {
-        opacity: 0;
-    }
-
-    .bottom-bar {
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-        -webkit-transform-origin: 10% 90%;
-                transform-origin: 10% 90%;
-    }
-
-    &.collapsed {
-        .top-bar {
-            -webkit-transform: rotate(0);
-                    transform: rotate(0);
-        }
-
-        .middle-bar {
-            opacity: 1;
-        }
-
-        .bottom-bar {
-            -webkit-transform: rotate(0);
-                    transform: rotate(0);
-        }
-    }
+    .navbar-mixin();
 }
 
 // NAVBAR UL
@@ -167,9 +84,9 @@ display: none !important;
 }
 
 #homepage-banner-text {
-    color: #fff;
-    background-color: transparent;
-    text-shadow: 0 0 5px #2175c0,0 0 10px #2175c0,0 0 20px #2175c0,0 0 30px #2175c0,0 0 40px #22A7F0,0 0 55px #22A7F0;
+    color: @white;
+    .background-color-mixin();
+    .text-shadow-blue-mixin();
 }
 
 
@@ -182,59 +99,59 @@ display: none !important;
 }
 
 label {
-    color: #fff !important;
+    color: @white !important;
     float: left;
     padding-top: 10px;
     //text-shadow: 0 0 5px #1fc139,0 0 10px #1fc139,0 0 20px #1fc139,0 0 30px #1fc139,0 0 40px #11691f,0 0 55px #11691f;
-    //text-shadow: 0 0 5px #ce08d7,0 0 10px #ce08d7,0 0 20px #ce08d7,0 0 30px #ce08d7,0 0 40px #700475,0 0 55px #700475;
-    text-shadow: 0 0 5px #2175c0,0 0 10px #2175c0,0 0 20px #2175c0,0 0 30px #2175c0,0 0 40px #22A7F0,0 0 55px #22A7F0;
+    //.text-shadow-pink-mixin();
+    .text-shadow-blue-mixin();
 }
 
 .form-control {
-    color: #fff;
+    color: @white;
     font-size: 20px !important;
     text-align: center;
-    background-color: transparent;
-    border-color: #22A7F0;
+    .background-color-mixin();
+    border-color: @blue-light;
     //box-shadow: 0 0 15px 2px #1fc139,#1fc139 0 0 11px 3px inset;
-    //box-shadow: 0 0 15px 2px #ce08d7,#ce08d7 0 0 11px 3px inset;
-    box-shadow: 0 0 15px 2px #2175c0,#2175c0 0 0 11px 3px inset;
-    text-shadow: 0 0 1px #2175c0,0 0 2px #2175c0,0 0 3px #2175c0,0 0 4px #2175c0,0 0 5px #22A7F0,0 0 6px #22A7F0;
+    //.box-shadow-pink-mixin();
+    .box-shadow-blue-mixin();
+    .text-shadow-blue-mixin();
 
     &:focus {
-        color: #fff;
-        border-color: #22A7F0;
-        background-color: transparent;
-        box-shadow: 0 0 15px 2px #2175c0,#2175c0 0 0 11px 3px inset;
-        text-shadow: 0 0 5px #2175c0,0 0 10px #2175c0,0 0 20px #2175c0,0 0 30px #2175c0,0 0 40px #22A7F0,0 0 55px #22A7F0;
+        color: @white;
+        border-color: @blue-light;
+        .background-color-mixin();
+        .box-shadow-blue-mixin();
+        .text-shadow-blue-mixin();
     }
 }
 
 .has-error {
     .form-control {
-            color: #fff;
-            border-color: #ce08d7;
-            background-color: transparent;
-            box-shadow: 0 0 15px 2px #ce08d7,#ce08d7 0 0 11px 3px inset;
+            color: @white;
+            border-color: @pink-light;
+            .background-color-mixin();
+            .box-shadow-pink-mixin();
 
         &:focus {
-            color: #fff;
-            border-color: #ce08d7;
-            background-color: transparent;
-            box-shadow: 0 0 15px 2px #ce08d7,#ce08d7 0 0 11px 3px inset;
+            color: @white;
+            border-color: @pink-light;
+            .background-color-mixin();
+            .box-shadow-pink-mixin();
         }
     }
 }
 
 span.help-block.has-error.ng-scope{
-        color: #fff;
+        color: @white;
         text-align: right;
-        background-color: transparent;
-        text-shadow: 0 0 5px #ce08d7,0 0 10px #ce08d7,0 0 20px #ce08d7,0 0 30px #ce08d7,0 0 40px #700475,0 0 55px #700475;
+        .background-color-mixin();
+        .text-shadow-pink-mixin();
 }
 
 // select {
-//     color: #22A7F0 !important;
+//     color: @blue-light !important;
 //     text-align: center !important;
 //     // width: 20% !important;
 // }
@@ -251,8 +168,8 @@ span.help-block.has-error.ng-scope{
     // display: block;
     text-align: center;
     border-color: transparent;
-    color: white !important;
-    text-shadow: 0 0 1px #2175c0,0 0 2px #2175c0,0 0 3px #2175c0,0 0 5px #2175c0,0 0 8px #22A7F0,0 0 10px #22A7F0;
+    color: @white !important;
+    .text-shadow-blue-mixin();
 
     thead tr th {
         text-align: right;
@@ -266,7 +183,7 @@ span.help-block.has-error.ng-scope{
         text-align: left;
 
         a {
-            color: white;
+            color: @white;
 
             &:hover {
                 text-decoration: none;

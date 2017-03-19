@@ -37,7 +37,7 @@ angular
     ];
 
     // ARRAY OF OWNERS
-    $scope.owners1_2017 = [
+    $scope.owners1 = [
         {
             owner: 'Jensen'
         },
@@ -77,7 +77,7 @@ angular
     ];
 
     // ARRAY OF OWNERS
-    $scope.owners2_2017 = [
+    $scope.owners2 = [
         {
             owner: 'Jensen'
         },
@@ -117,7 +117,7 @@ angular
     ];
 
     // ARRAY OF OWNERS
-    $scope.owners3_2017 = [
+    $scope.owners3 = [
         {
             owner: 'Jensen'
         },
@@ -157,7 +157,7 @@ angular
     ];
 
     // ARRAY OF OWNERS
-    $scope.owners4_2017 = [
+    $scope.owners4 = [
         {
             owner: 'Jensen'
         },
@@ -197,7 +197,7 @@ angular
     ];
 
     // ARRAY OF OWNERS
-    $scope.owners5_2017 = [
+    $scope.owners5 = [
         {
             owner: 'Jensen'
         },

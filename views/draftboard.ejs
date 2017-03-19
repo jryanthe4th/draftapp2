@@ -17,12 +17,12 @@
             <!-- DRAFTBOARD ROW -->
             <div class="row">
                 <div class="tab-content">
-                    <div class="draftboard_2017" class="tab-pane fade in active draftboard">
+                    <div class="draftboard" class="tab-pane fade in active draftboard">
                         <table id="draftboard-table">
                             
                             <!-- ROUND 1 -->
                             <thead class="owner-names">
-                                <tr><th ng-repeat="owner in owners1_2017">{{ owner.owner }}</th></tr>
+                                <tr><th ng-repeat="owner in owners1">{{ owner.owner }}</th></tr>
                             </thead>
                             <tbody>
                                 <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index < 12">{{ playerName.playerName }}</td></tr>
@@ -30,7 +30,7 @@
 
                             <!-- ROUND 2 -->
                             <thead class="owner-names">
-                                <tr><th ng-repeat="owner in owners2_2017">{{ owner.owner }}</th></tr>
+                                <tr><th ng-repeat="owner in owners2">{{ owner.owner }}</th></tr>
                             </thead>
                             <tbody>
                                 <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 11 && $index < 24">{{ playerName.playerName }}</td></tr>
@@ -38,7 +38,7 @@
 
                             <!-- ROUND 3 -->
                             <thead id="owner-names">
-                                <tr><th ng-repeat="owner in owners3_2017">{{ owner.owner }}</th></tr>
+                                <tr><th ng-repeat="owner in owners3">{{ owner.owner }}</th></tr>
                             </thead>
                             <tbody>
                                 <!-- <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 23 && $index < 36">{{ playerName.playerName }}</td></tr> -->
@@ -46,7 +46,7 @@
 
                             <!-- ROUND 4 -->
                             <thead id="owner-names">
-                                <tr><th ng-repeat="owner in owners4_2017">{{ owner.owner }}</th></tr>
+                                <tr><th ng-repeat="owner in owners4">{{ owner.owner }}</th></tr>
                             </thead>
                             <tbody>
                                 <!-- <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 35 && $index < 48">{{ playerName.playerName }}</td></tr> -->
@@ -54,7 +54,7 @@
 
                             <!-- ROUND 5 -->
                             <thead id="owner-names">
-                                <tr><th ng-repeat="owner in owners5_2017">{{ owner.owner }}</th></tr>
+                                <tr><th ng-repeat="owner in owners5">{{ owner.owner }}</th></tr>
                             </thead>
                             <tbody>
                                 <!-- <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 47 && $index < 60">{{ playerName.playerName }}</td></tr> -->
@@ -62,7 +62,7 @@
 
                             <!-- ROUND 6 -->
                             <thead id="owner-names">
-                                <tr><th ng-repeat="owner in owners6_2017">{{ owner.owner }}</th></tr>
+                                <tr><th ng-repeat="owner in owners6">{{ owner.owner }}</th></tr>
                             </thead>
                             <tbody>
                                 <!-- <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 59 && $index < 72">{{ playerName.playerName }}</td></tr> -->

@@ -5,19 +5,20 @@
         <script type="text/javascript">
             window.SAILS_LOCALS = { _csrf: '<%= _csrf %>', me: <%- JSON.stringify(me) %> };
         </script>
+        <meta name="viewport" content="width=auto, initial-scale=1, maximum-scale=1">
     </head>
     <body class="page-body" ng-app="DraftboardModule" ng-controller="DraftboardCtrl" ng-cloak>
-        <div class="container-fluid" id="draftboard-container">
+        <div class="container-fluid">
 
             <!-- DRAFT BUTTON ROW -->
-            <div class="row">
-
-            </div>
+<!--             <div class="row" id="draft-player-btn-div">
+                <button type="button" class="btn btn-md btn-primary" id="draft-player-btn">DRAFT PLAYER</button>
+            </div> -->
 
             <!-- DRAFTBOARD ROW -->
             <div class="row">
-                <div class="tab-content">
-                    <div class="draftboard" class="tab-pane fade in active draftboard">
+                <div class="col-xs-12" class="draftboard">
+                    
                         <table id="draftboard-table">
                             
                             <!-- ROUND 1 -->
@@ -69,7 +70,7 @@
                             </tbody>
 
                         </table>
-                    </div>
+                    
                 </div>
             </div>
 

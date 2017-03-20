@@ -15,15 +15,15 @@ body {
     // text-transform: uppercase;
     text-align: center;
     background-color: @black;
-    width: auto !important;
+    //width: auto !important;
     // background-image: url("/images/field1.jpg");
     //background-color: #222222;
     //background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
 }
 
 .container-fluid {
-    padding-top: 14%;
-    width: auto;
+    padding-top: 12%;
+    //width: auto;
 
     #homepage-image {
         text-align: center;
@@ -225,6 +225,7 @@ span.help-block.has-error.ng-scope{
 ////////////////////////////////////////
 ///     DRAFTBOARD VIEW
 ////////////////////////////////////////
+
 #draftboard-container {
     // width: 90%;
     // margin-left: 5%;
@@ -232,16 +233,25 @@ span.help-block.has-error.ng-scope{
     //margin-top: 3%;    
 }
 
+// @media(min-width:767px) {
+//     #draftboard-table {
+//         font-size: 0.5em !important;
+//     }
+// }
+
 // DRAFTBOARD TABLE
 #draftboard-table {
     margin: auto;
+    //table-layout: fixed;
+    //font-size: 1.5em;
+    width: 90%;
 
     table, thead, tbody, tr, th, td {
         border: 1px solid black;
         padding: 10px;
         width: 7%;
         text-align: center;
-        font-size: 1.1em;
+        //font-size: 1.1em;
     }
 
     thead tr th {
@@ -252,11 +262,28 @@ span.help-block.has-error.ng-scope{
     }
 }
 
+.modal {
+    background-color: #111;
+    opacity: 0.9 !important;
 
+    .modal-content {
+    background-color: black;
+    text-align: center;
 
+        label {
+            float: none !important;
+        }
 
+        input {
+            width: 50%;
+            margin: auto !important;
+        }
 
-
+        .modal-footer {
+            text-align: center;
+        }
+    }
+}
 
 
 

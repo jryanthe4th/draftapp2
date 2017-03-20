@@ -5,21 +5,53 @@
         <script type="text/javascript">
             window.SAILS_LOCALS = { _csrf: '<%= _csrf %>', me: <%- JSON.stringify(me) %> };
         </script>
-        <meta name="viewport" content="width=auto, initial-scale=1, maximum-scale=1">
     </head>
     <body class="page-body" ng-app="DraftboardModule" ng-controller="DraftboardCtrl" ng-cloak>
+        
+        <!-- DRAFT PLAYER MODAL -->
+        <div class="modal fade" id="draftPlayerModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+
+                <!-- MODAL CONTENT -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">ENTER DRAFT SELECTION</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="draftselection" placeholder="Player Name" ng-model="draftboardForm.playerName" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label id="position-label">Position</label><br>
+                            <select class="draftplayer-select" name="position" ng-model="draftboardForm.position" ng-options="opt for opt in ['QB','RB','WR','TE','K','DST']" required>
+                                <option></option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option>DST</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-lg btn-primary">SUBMIT SELECTION</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <div class="container-fluid">
 
-            <!-- DRAFT BUTTON ROW -->
-<!--             <div class="row" id="draft-player-btn-div">
-                <button type="button" class="btn btn-md btn-primary" id="draft-player-btn">DRAFT PLAYER</button>
-            </div> -->
+            <!-- DRAFT PLAYER BUTTON ROW -->
+            <div class="row" id="draft-player-btn-div">
+                <button type="button" class="btn btn-md btn-primary" id="draft-player-btn" data-toggle="modal" data-target="#draftPlayerModal">DRAFT PLAYER</button>
+            </div>
 
             <!-- DRAFTBOARD ROW -->
             <div class="row">
-                <div class="col-xs-12" class="draftboard">
+                <div class="col-xs-12">
                     
-                        <table id="draftboard-table">
+                        <table class="table" id="draftboard-table">
                             
                             <!-- ROUND 1 -->
                             <thead class="owner-names">

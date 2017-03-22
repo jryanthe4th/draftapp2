@@ -33,6 +33,10 @@ var jsFilesToInject = [
 	'js/dependencies/angular.js',
 	// 'js/dependencies/jquery.min.js',
 	'js/dependencies/jquery-3.1.1.min.js',
+	'js/dependencies/jquery-ui.js',
+	'js/dependencies/jquery-ui.min.js',
+	'js/dependencies/jquery.easing.min.js',
+	'js/dependencies/scrolling-nav.js',
 	// 'js/dependencies/jquery.easing.min.js',
 	'js/dependencies/**/*.js',
 

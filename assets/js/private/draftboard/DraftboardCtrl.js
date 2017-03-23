@@ -94,7 +94,7 @@ angular
                 owner: 'Jake'
             },
             {
-                owner: 'Jordan'
+                owner: 'Jake'
             },
             {
                 owner: 'Joe'

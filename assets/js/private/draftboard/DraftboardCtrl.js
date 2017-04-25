@@ -88,7 +88,7 @@ angular
                 owner: 'Brayden'
             },
             {
-                owner: 'Mack'
+                owner: 'Brayden'
             },
             {
                 owner: 'Jake'

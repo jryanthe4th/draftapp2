@@ -63,7 +63,7 @@ angular
                 owner: 'Nick'
             },
             {
-                owner: 'Danny'
+                owner: 'Jensen'
             },
             {
                 owner: 'Canaan'

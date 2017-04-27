@@ -8,44 +8,49 @@
     </head>
     <body class="page-body" ng-app="DraftboardModule" ng-controller="DraftboardCtrl" ng-cloak>
         
-        <!-- DRAFT PLAYER MODAL -->
-        <div class="modal fade" id="draftPlayerModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-md" role="document">
-
-                <!-- MODAL CONTENT -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                            <span id="modal-x-icon" aria-hidden="true">&times;</span>
-                        </button>
-                        <h5 class="modal-title" id="modalLabel">ENTER DRAFT SELECTION</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="draftselection" placeholder="Player Name" ng-model="draftboardForm.playerName" required>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <label id="position-label">Position</label><br>
-                            <select class="draftplayer-select" name="position" ng-model="draftboardForm.position" ng-options="opt for opt in ['QB','RB','WR','TE','K','DST']" required>
-                                <option></option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option>DST</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-lg btn-primary">SUBMIT SELECTION</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
         <div class="container-fluid">
 
-            <!-- DRAFT PLAYER BUTTON ROW -->
+
+            <!-- BUTTON TO LAUNCH DRAFT PLAYER MODAL -->
             <div class="row" id="draft-player-btn-div">
-                <button type="button" class="btn btn-md btn-primary" id="draft-player-btn" data-toggle="modal" data-target="#draftPlayerModal">DRAFT PLAYER</button>
+                <button type="button" class="btn btn-md btn-primary" id="draft-player-btn" ng-click="open()">DRAFT PLAYER</button>
             </div>
+
+            <!-- DRAFT PLAYER MODAL -->
+            <script type="text/ng-template" id="table.html" id="myModal">
+                <div class="modal-content" id="draftPlayerModal" tabindex="-1">
+                    
+
+                        <!-- MODAL DRAFTBOARD FORM -->
+                        
+                            <form ng-submit="submitDraftboardForm()">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close" ng-click="cancel()">
+                                        <span id="modal-x-icon" aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h5 class="modal-title" id="modalLabel">ENTER DRAFT SELECTION</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="draftselection" placeholder="Player Name" ng-model="draftboardForm.playerName" required>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label id="position-label">Position</label><br>
+                                        <select class="draftplayer-select" name="position" ng-model="draftboardForm.position" ng-options="opt for opt in ['QB','RB','WR','TE','K','DST']" required>
+                                            <option></option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option>DST</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-lg btn-primary">SUBMIT SELECTION</button>
+                                </div>
+                            </form>
+                        
+
+                    
+                </div>
+            </script>
 
             <!-- DRAFTBOARD ROW -->
             <div class="row">
@@ -74,7 +79,7 @@
                                 <tr><th ng-repeat="owner in owners3">{{ owner.owner }}</th></tr>
                             </thead>
                             <tbody>
-                                <!-- <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 23 && $index < 36">{{ playerName.playerName }}</td></tr> -->
+                                <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 23 && $index < 36">{{ playerName.playerName }}</td></tr>
                             </tbody>
 
                             <!-- ROUND 4 -->
@@ -82,7 +87,7 @@
                                 <tr><th ng-repeat="owner in owners4">{{ owner.owner }}</th></tr>
                             </thead>
                             <tbody>
-                                <!-- <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 35 && $index < 48">{{ playerName.playerName }}</td></tr> -->
+                                <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 35 && $index < 48">{{ playerName.playerName }}</td></tr>
                             </tbody>
 
                             <!-- ROUND 5 -->
@@ -90,7 +95,7 @@
                                 <tr><th ng-repeat="owner in owners5">{{ owner.owner }}</th></tr>
                             </thead>
                             <tbody>
-                                <!-- <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 47 && $index < 60">{{ playerName.playerName }}</td></tr> -->
+                                <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 47 && $index < 60">{{ playerName.playerName }}</td></tr>
                             </tbody>
 
                             <!-- ROUND 6 -->
@@ -98,7 +103,7 @@
                                 <tr><th ng-repeat="owner in owners6">{{ owner.owner }}</th></tr>
                             </thead>
                             <tbody>
-                                <!-- <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 59 && $index < 72">{{ playerName.playerName }}</td></tr> -->
+                                <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 59 && $index < 72">{{ playerName.playerName }}</td></tr>
                             </tbody>
 
                         </table>

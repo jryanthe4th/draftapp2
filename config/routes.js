@@ -64,7 +64,10 @@ module.exports.routes = {
 	'GET /signout' 	: 'UserController.signout',
 
 	// League creation
-	'POST /league'  : 'LeagueController.createLeague'
+	'POST /league'  : 'LeagueController.createLeague',
+
+	// Draft Selection
+	'POST /draftboard' : 'DraftSelectionController.draftboard'
 
 
 /***************************************************************************

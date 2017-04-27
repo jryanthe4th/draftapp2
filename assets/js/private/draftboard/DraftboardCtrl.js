@@ -1,15 +1,18 @@
-angular
-    .module('DraftboardModule')
-    .controller('DraftboardCtrl', ['$scope', '$http', function($scope, $http) {
+var myApp = angular.module('DraftboardModule', ['toastr', 'ngAnimate', 'ui.bootstrap']);
 
-        // Setup DraftboardForm loading state
-        $scope.draftboardForm = {
-            loading: false
-        }
+////////////////////////////
+// DRAFTBOARD CONTROLLER
+////////////////////////////
+myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', function($scope, $http, toastr, $uibModal) {
 
-        $scope.attributes = {};
-        $scope.attributes.playerName = '';
-        $scope.attributes.position = '';
+    // Setup DraftboardForm loading state
+    $scope.draftboardForm = {
+        loading: false
+    }
+
+    $scope.attributes = {};
+    $scope.attributes.playerName = '';
+    $scope.attributes.position = '';
 
         io.socket.get('/draftselection', function(data) {
             $scope.attributes.playerName = data;
@@ -235,6 +238,54 @@ angular
                 owner: 'Purk'
             }
         ];
+
+
+        $scope.open = function() {
+
+            var uibModalInstance = $uibModal.open({
+                templateUrl: 'table.html',
+                controller: 'uibModalInstanceCtrl'
+            });
+            uibModalInstance.result.then(function(newAttribute) {
+                $scope.attributes.playerName.push(newAttribute);
+            });
+        };
     }]);
 
+
+///////////////////////////
+// MODAL CONTROLLER
+///////////////////////////
+myApp.controller('uibModalInstanceCtrl', ['$scope', '$http', '$uibModalInstance', function($scope, $http, $uibModalInstance) {
+    $scope.submitDraftboardForm = function() {
+
+        // Submit a draft selection
+        $scope.draftboardForm.loading = true;
+
+        $http.post('/draftboard', {
+
+            playerName: $scope.draftboardForm.playerName,
+            position:   $scope.draftboardForm.position
+
+        })
+        .then(function onSuccess(sailsResponse) {
+            // window.location = '/';
+        })
+        .catch(function onError(sailsResponse) {
+            console.log(err);
+        })
+        .finally(function eitherWay() {
+            $scope.draftboardForm.loading = false;
+        });
+
+        $uibModalInstance.close({
+            'playerName': $scope.draftboardForm.playerName,
+            'position': $scope.draftboardForm.position
+        });
+    };
+
+    $scope.cancel = function() {
+        $uibModalInstance.dismiss('cancel');
+    };
+}]);
     

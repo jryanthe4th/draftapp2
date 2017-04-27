@@ -1,2 +1,2 @@
-angular
-    .module('DraftboardModule', []);
+// angular
+//     .module('DraftboardModule', ['toastr', 'ngAnimate', 'ui.bootstrap']);

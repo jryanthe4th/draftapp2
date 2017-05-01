@@ -54,64 +54,61 @@
 
             <!-- DRAFTBOARD ROW -->
             <div class="row">
-                <div class="col-xs-12">
-                    
-                        <table class="table" id="draftboard-table">
-                            
-                            <!-- ROUND 1 -->
-                            <thead class="owner-names">
-                                <tr><th ng-repeat="owner in owners1">{{ owner.owner }}</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index < 12">{{ playerName.playerName }}</td></tr>
-                            </tbody>
+                <div class="col-xs-12">  
+                    <table class="table" id="draftboard-table">
+                        
+                        <!-- ROUND 1 -->
+                        <thead class="owner-names">
+                            <tr><th ng-repeat="owner in owners1">{{ owner.owner }}</th></tr>
+                        </thead>
+                        <tbody class="player-names">
+                            <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index < 12">{{ playerName.playerName | uppercase }}</td></tr>
+                            <!-- <tr><td ng-repeat="position in attributes.position" ng-if="$index < 12" ng-style="set_color(position)">{{ position.position }}</td></tr> -->
+                        </tbody>
 
-                            <!-- ROUND 2 -->
-                            <thead class="owner-names">
-                                <tr><th ng-repeat="owner in owners2">{{ owner.owner }}</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 11 && $index < 24">{{ playerName.playerName }}</td></tr>
-                            </tbody>
+                        <!-- ROUND 2 -->
+                        <thead class="owner-names">
+                            <tr><th ng-repeat="owner in owners2">{{ owner.owner }}</th></tr>
+                        </thead>
+                        <tbody class="player-names">
+                            <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 11 && $index < 24">{{ playerName.playerName | uppercase }}</td></tr>
+                        </tbody>
 
-                            <!-- ROUND 3 -->
-                            <thead id="owner-names">
-                                <tr><th ng-repeat="owner in owners3">{{ owner.owner }}</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 23 && $index < 36">{{ playerName.playerName }}</td></tr>
-                            </tbody>
+                        <!-- ROUND 3 -->
+                        <thead id="owner-names">
+                            <tr><th ng-repeat="owner in owners3">{{ owner.owner }}</th></tr>
+                        </thead>
+                        <tbody class="player-names">
+                            <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 23 && $index < 36">{{ playerName.playerName | uppercase }}</td></tr>
+                        </tbody>
 
-                            <!-- ROUND 4 -->
-                            <thead id="owner-names">
-                                <tr><th ng-repeat="owner in owners4">{{ owner.owner }}</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 35 && $index < 48">{{ playerName.playerName }}</td></tr>
-                            </tbody>
+                        <!-- ROUND 4 -->
+                        <thead id="owner-names">
+                            <tr><th ng-repeat="owner in owners4">{{ owner.owner }}</th></tr>
+                        </thead>
+                        <tbody class="player-names">
+                            <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 35 && $index < 48">{{ playerName.playerName | uppercase }}</td></tr>
+                        </tbody>
 
-                            <!-- ROUND 5 -->
-                            <thead id="owner-names">
-                                <tr><th ng-repeat="owner in owners5">{{ owner.owner }}</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 47 && $index < 60">{{ playerName.playerName }}</td></tr>
-                            </tbody>
+                        <!-- ROUND 5 -->
+                        <thead id="owner-names">
+                            <tr><th ng-repeat="owner in owners5">{{ owner.owner }}</th></tr>
+                        </thead>
+                        <tbody class="player-names">
+                            <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 47 && $index < 60">{{ playerName.playerName | uppercase }}</td></tr>
+                        </tbody>
 
-                            <!-- ROUND 6 -->
-                            <thead id="owner-names">
-                                <tr><th ng-repeat="owner in owners6">{{ owner.owner }}</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 59 && $index < 72">{{ playerName.playerName }}</td></tr>
-                            </tbody>
-
-                        </table>
-                    
+                        <!-- ROUND 6 -->
+                        <thead id="owner-names">
+                            <tr><th ng-repeat="owner in owners6">{{ owner.owner }}</th></tr>
+                        </thead>
+                        <tbody class="player-names">
+                            <tr><td ng-repeat="playerName in attributes.playerName" ng-if="$index > 59 && $index < 72">{{ playerName.playerName | uppercase }}</td></tr>
+                        </tbody>
+                    </table>
+                      
                 </div>
             </div>
-
-
         </div>
     </body>
 </html>

@@ -13,12 +13,34 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
     $scope.attributes = {};
     $scope.attributes.playerName = '';
     $scope.attributes.position = '';
+    $scope.position = '';
 
         io.socket.get('/draftselection', function(data) {
             $scope.attributes.playerName = data;
             $scope.attributes.position = data;
             $scope.$apply();
         });
+
+        $scope.set_color = function(position) {
+            if(position.position == 'QB') {
+                return { background: '#FFABF1' }
+            }
+            else if(position.position == 'RB') {
+                return { background: '#ABFFB9' }
+            }
+            else if(position.position == 'WR') {
+                return { background: '#ABF1FF' }
+            }
+            else if(position.position == 'TE') {
+                return { background: '#FF8770' }
+            }
+            else if(position.position == 'DST') {
+                return { background: '#F1FFAB' }
+            }
+            else if(position.position == 'K') {
+                return { background: '#F1FFAB' }
+            }
+        }
 
         // ARRAY OF ROUNDS
         $scope.rounds = [

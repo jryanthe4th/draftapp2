@@ -87,10 +87,10 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
                 owner: 'Jensen'
             },
             {
-                owner: 'Nick'
+                owner: 'Jensen'
             },
             {
-                owner: 'Jensen'
+                owner: 'Nick'
             },
             {
                 owner: 'Canaan'
@@ -146,7 +146,7 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
         // ARRAY OF OWNERS
         $scope.owners3 = [
             {
-                owner: 'Jensen'
+                owner: 'Nick'
             },
             {
                 owner: 'Mack'
@@ -274,6 +274,7 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
                 $scope.attributes.playerName.push(newAttribute);
             });
         };
+
     }]);
 
 

@@ -106,10 +106,10 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
         // ARRAY OF OWNERS
         $scope.owners2 = [
             {
-                owner: 'Jensen'
+                owner: 'Jordan'
             },
             {
-                owner: 'Jordan'
+                owner: 'Jensen'
             },
             {
                 owner: 'Brayden'

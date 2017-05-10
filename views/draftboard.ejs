@@ -20,35 +20,31 @@
             <script type="text/ng-template" id="table.html" id="myModal">
                 <div class="modal-content" id="draftPlayerModal" tabindex="-1">
                     
-
-                        <!-- MODAL DRAFTBOARD FORM -->
-                        
-                            <form ng-submit="submitDraftboardForm()">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="close" ng-click="cancel()">
-                                        <span id="modal-x-icon" aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h5 class="modal-title" id="modalLabel">ENTER DRAFT SELECTION</h5>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="draftselection" placeholder="Player Name" ng-model="draftboardForm.playerName" required>
-                                    </div>
-                                    <br>
-                                    <div class="form-group">
-                                        <label id="position-label">Position</label><br>
-                                        <select class="draftplayer-select" name="position" ng-model="draftboardForm.position" ng-options="opt for opt in ['QB','RB','WR','TE','K','DST']" required>
-                                            <option></option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option>DST</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="submit" class="btn btn-lg btn-primary">SUBMIT SELECTION</button>
-                                </div>
-                            </form>
-                        
-
-                    
+                    <!-- MODAL DRAFTBOARD FORM -->
+                    <form ng-submit="submitDraftboardForm()">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="close" ng-click="cancel()">
+                                <span id="modal-x-icon" aria-hidden="true">&times;</span>
+                            </button>
+                            <h5 class="modal-title" id="modalLabel">ENTER DRAFT SELECTION</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="draftselection" placeholder="Player Name" ng-model="draftboardForm.playerName" required>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label id="position-label">Position</label><br>
+                                <select class="draftplayer-select" name="position" ng-model="draftboardForm.position" ng-options="opt for opt in ['QB','RB','WR','TE','K','DST']" required>
+                                    <option></option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option>DST</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-lg btn-primary">SUBMIT SELECTION</button>
+                        </div>
+                    </form>
+                            
                 </div>
             </script>
 

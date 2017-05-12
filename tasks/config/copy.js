@@ -28,8 +28,15 @@ module.exports = function(grunt) {
         cwd: './assets',
         src: ['**/*.!(coffee|less)'],
         dest: '.tmp/public'
+      }, {
+        expand: true,
+        cwd: './assets/deviceIcons',
+        src: ['**/*.!(coffee|less)'],
+        dest: '.tmp/public'
       }]
     },
+
+
     build: {
       files: [{
         expand: true,

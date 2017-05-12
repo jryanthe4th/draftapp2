@@ -81,6 +81,7 @@ var templateFilesToInject = [
 
 
 
+
 // Default path for public folder (see documentation for more information)
 var tmpPath = '.tmp/public/';
 
@@ -96,5 +97,4 @@ module.exports.jsFilesToInject = jsFilesToInject.map(function(jsPath) {
 module.exports.templateFilesToInject = templateFilesToInject.map(function(tplPath) {
   return require('path').join('assets/',tplPath);
 });
-
 

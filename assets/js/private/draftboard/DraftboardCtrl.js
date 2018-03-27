@@ -63,8 +63,210 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
             }
         ];
 
+////////// 2018 DRAFT ////////////////////////////////////////////////////
         // ARRAY OF OWNERS
-        $scope.owners1 = [
+        $scope.owners1_2018 = [
+            {
+                owner: 'Joe'
+            },
+            {
+                owner: 'Purk'
+            },
+            {
+                owner: 'Austin'
+            },
+            {
+                owner: 'Purk'
+            },
+            {
+                owner: 'Brayden'
+            },
+            {
+                owner: 'Brayden'
+            },
+            {
+                owner: 'Jensen'
+            },
+            {
+                owner: 'Danny'
+            },
+            {
+                owner: 'Jensen'
+            },
+            {
+                owner: 'Nick'
+            },
+            {
+                owner: 'Jordan'
+            },
+            {
+                owner: 'Nick'
+            }
+        ];
+
+        // ARRAY OF OWNERS
+        $scope.owners2_2018 = [
+            {
+                owner: 'Joe'
+            },
+            {
+                owner: 'Canaan'
+            },
+            {
+                owner: 'Nick'
+            },
+            {
+                owner: 'Joe'
+            },
+            {
+                owner: 'Brayden'
+            },
+            {
+                owner: 'Brayden'
+            },
+            {
+                owner: 'Austin'
+            },
+            {
+                owner: 'Austin'
+            },
+            {
+                owner: 'Canaan'
+            },
+            {
+                owner: 'Riley'
+            },
+            {
+                owner: 'Nick'
+            },
+            {
+                owner: 'Purk'
+            }
+        ];
+
+        // ARRAY OF OWNERS
+        $scope.owners3_2018 = [
+            {
+                owner: 'Joe'
+            },
+            {
+                owner: 'Canaan'
+            },
+            {
+                owner: 'Jensen'
+            },
+            {
+                owner: 'Nick'
+            },
+            {
+                owner: 'Brayden'
+            },
+            {
+                owner: 'Danny'
+            },
+            {
+                owner: 'Austin'
+            },
+            {
+                owner: 'Jake'
+            },
+            {
+                owner: 'Nick'
+            },
+            {
+                owner: 'Jake'
+            },
+            {
+                owner: 'Jordan'
+            },
+            {
+                owner: 'Austin'
+            }
+        ];
+
+        // ARRAY OF OWNERS
+        $scope.owners4_2018 = [
+            {
+                owner: 'Joe'
+            },
+            {
+                owner: 'Canaan'
+            },
+            {
+                owner: 'Jensen'
+            },
+            {
+                owner: 'Nick'
+            },
+            {
+                owner: 'Brayden'
+            },
+            {
+                owner: 'Purk'
+            },
+            {
+                owner: 'Austin'
+            },
+            {
+                owner: 'Jake'
+            },
+            {
+                owner: 'Mack'
+            },
+            {
+                owner: 'Danny'
+            },
+            {
+                owner: 'Jordan'
+            },
+            {
+                owner: 'Riley'
+            }
+        ];
+
+        // ARRAY OF OWNERS
+        $scope.owners5_2018 = [
+            {
+                owner: 'Joe'
+            },
+            {
+                owner: 'Canaan'
+            },
+            {
+                owner: 'Jensen'
+            },
+            {
+                owner: 'Nick'
+            },
+            {
+                owner: 'Brayden'
+            },
+            {
+                owner: 'Purk'
+            },
+            {
+                owner: 'Austin'
+            },
+            {
+                owner: 'Jake'
+            },
+            {
+                owner: 'Mack'
+            },
+            {
+                owner: 'Danny'
+            },
+            {
+                owner: 'Jordan'
+            },
+            {
+                owner: 'Riley'
+            }
+        ];
+
+////////// 2017 DRAFT ////////////////////////////////////////////////////
+        // ARRAY OF OWNERS
+        $scope.owners1_2017 = [
             {
                 owner: 'Jensen'
             },
@@ -104,7 +306,7 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
         ];
 
         // ARRAY OF OWNERS
-        $scope.owners2 = [
+        $scope.owners2_2017 = [
             {
                 owner: 'Jordan'
             },
@@ -144,7 +346,7 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
         ];
 
         // ARRAY OF OWNERS
-        $scope.owners3 = [
+        $scope.owners3_2017 = [
             {
                 owner: 'Nick'
             },
@@ -184,7 +386,7 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
         ];
 
         // ARRAY OF OWNERS
-        $scope.owners4 = [
+        $scope.owners4_2017 = [
             {
                 owner: 'Jensen'
             },
@@ -224,7 +426,7 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
         ];
 
         // ARRAY OF OWNERS
-        $scope.owners5 = [
+        $scope.owners5_2017 = [
             {
                 owner: 'Jensen'
             },
@@ -262,7 +464,6 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
                 owner: 'Purk'
             }
         ];
-
 
         $scope.open = function() {
 
@@ -313,4 +514,3 @@ myApp.controller('uibModalInstanceCtrl', ['$scope', '$http', '$uibModalInstance'
         $uibModalInstance.dismiss('cancel');
     };
 }]);
-    

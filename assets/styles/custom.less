@@ -28,7 +28,7 @@ body {
     #homepage-image {
         text-align: center;
     }
-}   
+}
 
 .btn-primary {
     .btn-primary-mixin();
@@ -170,7 +170,7 @@ span.help-block.has-error.ng-scope{
     min-width: 100px;
     max-width: 250px;
     margin: auto;
-    font-size: 1.5em;  
+    font-size: 1.5em;
     // display: block;
     text-align: center;
     border-color: transparent;
@@ -230,7 +230,7 @@ span.help-block.has-error.ng-scope{
     // width: 90%;
     // margin-left: 5%;
     // margin-right: 5%;
-    //margin-top: 3%;    
+    //margin-top: 3%;
 }
 
 // @media(min-width:767px) {
@@ -255,16 +255,17 @@ span.help-block.has-error.ng-scope{
     }
 
     thead tr th {
-        .text-shadow-blue-mixin();
+        // .text-shadow-blue-mixin();
         background: #222;
-        color: white;
+        color: #AED6F1;
         margin: auto;
     }
 }
 
 .player-names {
     font-size: 1.5em;
-    .text-shadow-turquoise-mixin()
+    color: #D6EAF8;
+    // .text-shadow-turquoise-mixin()
     //.text-shadow-pink-mixin();
     //background-color: #181818;
 }
@@ -312,23 +313,36 @@ span.help-block.has-error.ng-scope{
 // }
 
 
+#draftboard-tabs {
+	padding-top: 3%;
+	padding-left: 5.1%;
+	border-bottom: 1px solid #000000;
 
+	li {
+		width: 10%;
+		min-width: 100px;
+		text-align: center;
+		font-family: 'Jura', sans-serif;
 
+		a {
+			background-color: transparent;
+			border: 1px solid #AED6F1;
+			border-bottom: none;
+            color: #AED6F1;
+			&:hover {
+				background-color: #AED6F1;
+                color: black;
+			}
+		}
 
+	}
 
+	li.active {
+		border-bottom: none;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		a {
+			background-color: transparent;
+            color: #AED6F1;
+		}
+	}
+}

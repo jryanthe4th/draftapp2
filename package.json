@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "description": "a Sails application",
   "keywords": [],
+  "engines": {
+      "node": "8.9.1"
+  },
   "dependencies": {
     "angular": "^1.6.9",
     "angular-ui-bootstrap": "^2.5.6",

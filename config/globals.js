@@ -10,6 +10,17 @@
  */
 module.exports.globals = {
 
+    // var express = require('express');
+    // var Mailgun = require('mailgun-js');
+    // var app = express();
+    // var api_key = 'MAILGUN-API-KEY';
+    // var domain = 'mg.dynastydraftboard.com';
+    // var from_who = 'DynastyDraftBoard <mailgun@dynastydraftboard.com>';
+
+    
+
+
+
   /****************************************************************************
   *                                                                           *
   * Expose the lodash installed in Sails core as a global variable. If this   *

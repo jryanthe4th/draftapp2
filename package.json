@@ -5,7 +5,7 @@
   "description": "a Sails application",
   "keywords": [],
   "engines": {
-      "node": "8.9.1"
+    "node": "8.9.1"
   },
   "dependencies": {
     "angular": "^1.6.9",
@@ -33,6 +33,7 @@
     "machinepack-gravatar": "^1.2.0",
     "machinepack-passwords": "^2.3.0",
     "machinepack-sockets": "^1.2.1",
+    "mailgun-js": "^0.17.0",
     "rc": "1.0.1",
     "redis": "^2.8.0",
     "sails": "~0.12.1",

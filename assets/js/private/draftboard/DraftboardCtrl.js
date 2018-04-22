@@ -5,7 +5,7 @@ var myApp = angular.module('DraftboardModule', ['toastr', 'ngAnimate', 'ui.boots
 ////////////////////////////
 myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', function($scope, $http, toastr, $uibModal) {
 
-    var cachebuster = 1;
+    var cachebuster = 2;
 
     // Setup DraftboardForm loading state
     $scope.draftboardForm = {

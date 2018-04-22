@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-	
+
     signup: function(req, res) {
 
         var Passwords = require('machinepack-passwords');
@@ -26,7 +26,7 @@ module.exports = {
                     emailAddress: req.param('email')
                 }).exec({
                     error: function(err) {
-                        return res.negotiate(err); 
+                        return res.negotiate(err);
                     },
                     success: function(gravatarUrl) {
                         // Create a User with the params sent from
@@ -59,6 +59,8 @@ module.exports = {
 
                             // Login User
                             req.session.me = newUser.id;
+							req.session.firstName = newUser.firstName;
+							req.session.lastName = newUser.lastName;
 
                             // Send back the id of the new User
                             return res.json({
@@ -101,6 +103,8 @@ module.exports = {
 
                     // Store user id in the user session
                     req.session.me = user.id;
+					req.session.firstName = user.firstName;
+					req.session.lastName = user.lastName;
 
                     // All done, let the client know that everything worked
                     return res.ok();
@@ -125,9 +129,11 @@ module.exports = {
 
             // Log out
             req.session.me = null;
+			req.session.firstName = null;
+			req.session.lastName = null;
 
             // Redirect to homepage or send a 200
             return res.backToHomePage();
-        });    
+        });
     }
 };

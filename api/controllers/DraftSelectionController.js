@@ -8,12 +8,15 @@
 module.exports = {
 
     draftboard: function(req, res) {
-
-        var api_key = 'key-b94c298eeb424bebbf14230762f41898';
-        var domain = 'mg.dynastydraftboard.com';
-        var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+        var appConfig = require('../../config.js');
+        var mailgun = require('mailgun-js')({
+            apiKey: appConfig.mailgun.apiKey,
+            domain: appConfig.mailgun.domain
+            // apiKey: process.env.apiKey,
+            // domain: process.env.domain
+        });
         var members = [
-            'joseph.ryan.iv@gmail.com'
+            'hardmoney@mg.dynastydraftboard.com'
         ];
         var draftData = [
             'A draft selection has been submitted',

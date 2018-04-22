@@ -12,8 +12,6 @@ module.exports = {
         var mailgun = require('mailgun-js')({
             apiKey: appConfig.mailgun.apiKey,
             domain: appConfig.mailgun.domain
-            // apiKey: process.env.apiKey,
-            // domain: process.env.domain
         });
         var members = [
             'hardmoney@mg.dynastydraftboard.com'

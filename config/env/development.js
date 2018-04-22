@@ -9,9 +9,11 @@
  * any private information to this file!
  *
  */
+var appConfig = require('../../config.js');
 
 module.exports = {
-
+    // "apiKey": appConfig.mailgun.apiKey,
+    // "domain": appConfig.mailgun.domain
   /***************************************************************************
    * Set the default database connection for models in the development       *
    * environment (see config/connections.js and config/models.js )           *

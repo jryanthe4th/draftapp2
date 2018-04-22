@@ -11,8 +11,8 @@
  */
 
 module.exports = {
-    apiKey: process.env.apiKey,
-    domain: process.env.domain,  
+    // apiKey: process.env.apiKey,
+    // domain: process.env.domain,
   /***************************************************************************
    * Set the default database connection for models in the production        *
    * environment (see config/connections.js and config/models.js )           *

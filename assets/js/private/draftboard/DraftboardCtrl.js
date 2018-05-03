@@ -110,10 +110,10 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
                 owner: 'Joe'
             },
             {
-                owner: 'Canaan'
+                owner: 'Purk'
             },
             {
-                owner: 'Purk'
+                owner: 'Canaan'
             },
             {
                 owner: 'Joe'

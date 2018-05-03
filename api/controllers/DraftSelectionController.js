@@ -91,9 +91,6 @@ module.exports = {
             })
             .catch(err => console.error(err));
 
-            // twilioClient.messages.create(smsData)
-            // .then(message => console.log(message.sid));
-
             return res.json({
                 id: newDraftSelection.id
             });

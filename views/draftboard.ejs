@@ -12,9 +12,9 @@
 
 
             <!-- BUTTON TO LAUNCH DRAFT PLAYER MODAL -->
-            <!-- <div class="row" id="draft-player-btn-div">
+            <div class="row" id="draft-player-btn-div">
                 <button type="button" class="btn btn-md btn-primary" id="draft-player-btn" ng-click="open()">DRAFT PLAYER</button>
-            </div> -->
+            </div>
 
             <!-- DRAFT PLAYER MODAL -->
             <script type="text/ng-template" id="table.html" id="myModal">
@@ -51,6 +51,7 @@
             <ul id="draftboard-tabs" class="nav nav-tabs">
 				<li role="presentation" class="active"><a data-toggle="tab" href="#draftboard_2018">2018 Draft</a></li>
 				<li role="presentation"><a data-toggle="tab" href="#draftboard_2017">2017 Draft</a></li>
+                <li role="presentation"><a data-toggle="tab" href="#list">List</a></li>
 			</ul>
 
             <!-- DRAFTBOARD ROW -->
@@ -150,6 +151,24 @@
                     </table>
                 </div>
                 <!-- END 2017 DRAFT -->
+
+                <div id="list" class="tab-pane fade">
+			        <div id="list-left">
+				        <ol>
+				        	<li ng-if="$index > 59 && $index < 120" ng-repeat="position in attributes.position | orderBy:'$index':reverse">
+				        		<p id="ol-position" ng-style="set_color(position)">{{ position.position }}</p>
+				        	</li>
+				        </ol>
+			        </div>
+			        <div id="list-right">
+				        <ol id="list-right-ol">
+				        	<li ng-if="$index > 59 && $index < 120" ng-repeat="playerName in attributes.playerName | orderBy:'$index':reverse">
+				        		<p id="ol-playerName">{{ playerName.playerName }}</p>
+				        	</li>
+				        </ol>
+	            	</div>
+		        </div>
+
             </div>
         </div>
     </body>

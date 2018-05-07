@@ -163,7 +163,7 @@
 			        <div id="list-right">
 				        <ol id="list-right-ol">
 				        	<li ng-if="$index > 59 && $index < 120" ng-repeat="playerName in attributes.playerName | orderBy:'$index':reverse">
-				        		<p id="ol-playerName">{{ playerName.playerName }}</p>
+				        		<p id="ol-playerName">{{ playerName.playerName | uppercase }}</p>
 				        	</li>
 				        </ol>
 	            	</div>

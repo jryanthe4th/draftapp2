@@ -162,7 +162,7 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
                 owner: 'Brayden'
             },
             {
-                owner: 'Danny'
+                owner: 'Purk'
             },
             {
                 owner: 'Austin'
@@ -202,7 +202,7 @@ myApp.controller('DraftboardCtrl', ['$scope', '$http', 'toastr', '$uibModal', fu
                 owner: 'Brayden'
             },
             {
-                owner: 'Purk'
+                owner: 'Danny'
             },
             {
                 owner: 'Austin'

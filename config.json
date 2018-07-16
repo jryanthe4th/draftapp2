@@ -1,10 +1,10 @@
 {
     "mailgun": {
-        "apiKey": "key-5d14323fcd92df4ba406fe195373233a",
+        "apiKey": "key-",
         "domain": "mg.dynastydraftboard.com"
     },
     "twilio": {
-        "accountSid": "AC9b0bb20c76a79bf9ca663990b6adccb9",
-        "authToken": "e0b946ca78a2901e2dfa392f8b079bc3"
+        "accountSid": "",
+        "authToken": ""
     }
 }
